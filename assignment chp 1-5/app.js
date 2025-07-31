@@ -103,3 +103,27 @@ var camelCaseVariable;
 // var user name;    // ❌ Spaces not allowed
 // var @count;       // ❌ Cannot start with special characters other than $ or _
 
+// Qno 3
+document.write("<h1>“Rules for naming JS variables”</h1> ")
+
+document.write("Variable names can only contain numbers, $ and _. For example $my_1stVariable "  + "<br />" + "Variables must begin with a letter , $ or_. For example $name, _name or name"   + "<br />" + "Variable names are case sensitive"  + "<br />" + "Variable names should not be JS keyword" )
+
+
+//  -------------------------chp 5      -------------------------------
+// Qno1
+var num1 = +prompt("enter first Number:")
+var num2 = +prompt("enter second Number:")
+var sum = num1 + num2
+// Qno 2
+var sub = num1 - num2
+var product = num1*num2
+var devision = num1 / num2
+var modulus = num1 % num2
+document.write(" <h3>the sum of " + num1 + " and " + num2 + " is " + sum + "<br />" + "the difference of " + num1 + " and " + num2 + " is " + sub  + "</br>" + "the product of " + num1 + " and " + num2 + " is " + product + "<br />" + "the devision of " + num1 + " and " + num2 + " is " + devision + "<br />" + "the modulus of " + num1 + " and " + num2 + " is " + modulus +  "<h3>")
+
+// Qno3
+
+
+
+
+// Qno4
