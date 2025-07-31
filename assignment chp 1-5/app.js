@@ -46,7 +46,60 @@ var myName="Ansharah Amin"
 // alert(course)
 
 // Qno5
-var favMeal = "PIZZA"
-alert(favMeal + "\n" +   favMeal.slice(1, 4));
+// var favMeal = "PIZZA"
+// alert(favMeal + "\n" +   favMeal.slice(0, 4) + "\n" +   favMeal.slice(0, 3) + "\n" +   favMeal.slice(0, 2) + "\n" +   favMeal.slice(0, 1) + "\n" +   favMeal.slice(1, 1) );
 
-// favMeal[1]
+//   Qno6
+
+// var email = "insharahamin1250@gmail.com"
+// alert("My Email Address is" + email)
+
+// Qno 7
+// var book = "A smarter way to learn JavaScript"
+// alert("i am trying to learn from the book " + book)
+
+// Qno8
+// document.write("Yah! I can write HTML content through Java script")
+
+// Qno 9
+// var symbols = "▬▬▬▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬▬▬▬";
+// alert(symbols);
+
+                                                // chp no 3  / 
+//  Qno1                                               //  
+// var age = 15
+// alert("I am " + age + " years old")                                                
+
+// Qno 2
+// var visitTime = 14
+// alert("You have visited this site " + visitTime + " times")
+
+// Qno 3
+// var birthyear = 2007
+// document.write ("my birth year is " + birthyear + "<br />" + " Data type of my declared  variable is number")
+
+// Qno 4
+// var visitor = "<b> John Doe </b>" 
+// var product = "<b> T- shirts </b>"
+// var quantity = "<b> 5 </b>"
+// document.write(visitor + " ordered " + quantity + " " + product + "from xyz clothing store" )
+
+                                                // ch#4//
+                                                // Qno1//
+var a, b, c;
+// Qno2//
+// legal Variables
+var myName;
+var user_123;
+var $price;
+var _value;
+var camelCaseVariable;
+
+// illegal variables
+
+// var 123abc;       // ❌ Cannot start with a digit
+// var my-name;      // ❌ Hyphens not allowed (interpreted as minus)
+// var var;          // ❌ Reserved keyword
+// var user name;    // ❌ Spaces not allowed
+// var @count;       // ❌ Cannot start with special characters other than $ or _
+
