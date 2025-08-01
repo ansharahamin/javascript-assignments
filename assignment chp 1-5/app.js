@@ -104,26 +104,75 @@ var camelCaseVariable;
 // var @count;       // ❌ Cannot start with special characters other than $ or _
 
 // Qno 3
-document.write("<h1>“Rules for naming JS variables”</h1> ")
+// document.write("<h1>“Rules for naming JS variables”</h1> ")
 
-document.write("Variable names can only contain numbers, $ and _. For example $my_1stVariable "  + "<br />" + "Variables must begin with a letter , $ or_. For example $name, _name or name"   + "<br />" + "Variable names are case sensitive"  + "<br />" + "Variable names should not be JS keyword" )
+// document.write("Variable names can only contain numbers, $ and _. For example $my_1stVariable "  + "<br />" + "Variables must begin with a letter , $ or_. For example $name, _name or name"   + "<br />" + "Variable names are case sensitive"  + "<br />" + "Variable names should not be JS keyword" )
 
 
 //  -------------------------chp 5      -------------------------------
 // Qno1
-var num1 = +prompt("enter first Number:")
-var num2 = +prompt("enter second Number:")
-var sum = num1 + num2
+// var num1 = +prompt("enter first Number:")
+// var num2 = +prompt("enter second Number:")
+// var sum = num1 + num2
 // Qno 2
-var sub = num1 - num2
-var product = num1*num2
-var devision = num1 / num2
-var modulus = num1 % num2
-document.write(" <h3>the sum of " + num1 + " and " + num2 + " is " + sum + "<br />" + "the difference of " + num1 + " and " + num2 + " is " + sub  + "</br>" + "the product of " + num1 + " and " + num2 + " is " + product + "<br />" + "the devision of " + num1 + " and " + num2 + " is " + devision + "<br />" + "the modulus of " + num1 + " and " + num2 + " is " + modulus +  "<h3>")
+// var sub = num1 - num2
+// var product = num1*num2
+// var devision = num1 / num2
+// var modulus = num1 % num2
+// document.write(" <h3>the sum of " + num1 + " and " + num2 + " is " + sum + "<br />" + "the difference of " + num1 + " and " + num2 + " is " + sub  + "</br>" + "the product of " + num1 + " and " + num2 + " is " + product + "<br />" + "the devision of " + num1 + " and " + num2 + " is " + devision + "<br />" + "the modulus of " + num1 + " and " + num2 + " is " + modulus +  "<h3>")
 
 // Qno3
+// a
+var number ;
+// b
+document.write("“Value after variable declaration is:" + number)
+// c
+var number = 5;
+// d
+document.write( "<br />" +" Initial Value is:" + number + "<br />")
+// e
+number++;
+// f
+document.write("the value after increment is " + number + "<br />")
+// g
+var number = number + 7
+// h
+document.write("the value after addition is" + number + "<br />")
+// i
+number--;
+// j
+document.write("the value after decrement is " + number + "<br />")
+// k
+var number = number % 3
+document.write("the remainder is " + number + "<br />")
 
 
 
 
 // Qno4
+var ticket = 600
+ticket = ticket * 5
+document.write("the total cost to buy 5 tickets to a movie is: " + ticket + "pkr" + "<br />")
+
+// Qno5
+var digit=4
+ans=4*1
+document.write(digit + "x" + 1 + "=" + ans + "<br />")
+ans=4*2
+document.write(digit + "x" + 2 + "=" + ans + "<br />")
+ans=4*3
+document.write(digit + "x" + 3 + "=" + ans + "<br />")
+ans=4*4
+document.write(digit + "x" + 4 + "=" + ans + "<br />")
+ans=4*5
+document.write(digit + "x" + 5 + "=" + ans + "<br />")
+ans=4*6
+document.write(digit + "x" + 6 + "=" + ans + "<br />")
+ans=4*7
+document.write(digit + "x" + 7 + "=" + ans + "<br />")
+ans=4*8
+document.write(digit + "x" + 8 + "=" + ans + "<br />")
+ans=4*9
+document.write(digit + "x" + 9 + "=" + ans + "<br />")
+ans=4*10
+document.write(digit + "x" + 10 + "=" + ans + "<br />")
