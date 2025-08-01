@@ -28,10 +28,10 @@
 //                                                             chp 2
 
 // Qno 1
-var userName;
+// var userName;
 
 // Qno 2
-var myName="Ansharah Amin"
+// var myName="Ansharah Amin"
 
 // Qno3
 // var titled_message="hello World"
@@ -86,14 +86,14 @@ var myName="Ansharah Amin"
 
                                                 // ch#4//
                                                 // Qno1//
-var a, b, c;
+// var a, b, c;
 // Qno2//
 // legal Variables
-var myName;
-var user_123;
-var $price;
-var _value;
-var camelCaseVariable;
+// var myName;
+// var user_123;
+// var $price;
+// var _value;
+// var camelCaseVariable;
 
 // illegal variables
 
@@ -123,56 +123,81 @@ var camelCaseVariable;
 
 // Qno3
 // a
-var number ;
+// var number ;
 // b
-document.write("“Value after variable declaration is:" + number)
+// document.write("“Value after variable declaration is:" + number)
 // c
-var number = 5;
+// var number = 5;
 // d
-document.write( "<br />" +" Initial Value is:" + number + "<br />")
+// document.write( "<br />" +" Initial Value is:" + number + "<br />")
 // e
-number++;
+// number++;
 // f
-document.write("the value after increment is " + number + "<br />")
+// document.write("the value after increment is " + number + "<br />")
 // g
-var number = number + 7
+// var number = number + 7
 // h
-document.write("the value after addition is" + number + "<br />")
+// document.write("the value after addition is" + number + "<br />")
 // i
-number--;
+// number--;
 // j
-document.write("the value after decrement is " + number + "<br />")
+// document.write("the value after decrement is " + number + "<br />")
 // k
-var number = number % 3
-document.write("the remainder is " + number + "<br />")
+// var number = number % 3
+// document.write("the remainder is " + number + "<br />")
 
 
 
 
 // Qno4
-var ticket = 600
-ticket = ticket * 5
-document.write("the total cost to buy 5 tickets to a movie is: " + ticket + "pkr" + "<br />")
+// var ticket = 600
+// ticket = ticket * 5
+// document.write("the total cost to buy 5 tickets to a movie is: " + ticket + "pkr" + "<br />")
 
 // Qno5
-var digit=4
-ans=4*1
-document.write(digit + "x" + 1 + "=" + ans + "<br />")
-ans=4*2
-document.write(digit + "x" + 2 + "=" + ans + "<br />")
-ans=4*3
-document.write(digit + "x" + 3 + "=" + ans + "<br />")
-ans=4*4
-document.write(digit + "x" + 4 + "=" + ans + "<br />")
-ans=4*5
-document.write(digit + "x" + 5 + "=" + ans + "<br />")
-ans=4*6
-document.write(digit + "x" + 6 + "=" + ans + "<br />")
-ans=4*7
-document.write(digit + "x" + 7 + "=" + ans + "<br />")
-ans=4*8
-document.write(digit + "x" + 8 + "=" + ans + "<br />")
-ans=4*9
-document.write(digit + "x" + 9 + "=" + ans + "<br />")
-ans=4*10
-document.write(digit + "x" + 10 + "=" + ans + "<br />")
+// table of 4
+// var digit=4
+// ans=4*1
+// document.write(digit + "x" + 1 + "=" + ans + "<br />")
+// ans=4*2
+// document.write(digit + "x" + 2 + "=" + ans + "<br />")
+// ans=4*3
+// document.write(digit + "x" + 3 + "=" + ans + "<br />")
+// ans=4*4
+// document.write(digit + "x" + 4 + "=" + ans + "<br />")
+// ans=4*5
+// document.write(digit + "x" + 5 + "=" + ans + "<br />")
+// ans=4*6
+// document.write(digit + "x" + 6 + "=" + ans + "<br />")
+// ans=4*7
+// document.write(digit + "x" + 7 + "=" + ans + "<br />")
+// ans=4*8
+// document.write(digit + "x" + 8 + "=" + ans + "<br />")
+// ans=4*9
+// document.write(digit + "x" + 9 + "=" + ans + "<br />")
+// ans=4*10
+// document.write(digit + "x" + 10 + "=" + ans + "<br />")
+
+// Qno6
+
+// temp conversion
+
+
+// calcius = 25
+// far = 70
+// calciusformula = (far - 32)*5/9
+// farformula=(calcius*9/5)+32
+// document.write(calcius + "<sup>o</sup>C is " +  farformula + "<sup>o</sup>F" + "<br>")
+// document.write(far + "<sup>o</sup>F is " +  calciusformula + "<sup>o</sup>C" + "<br>")
+
+
+
+// Qno7
+var first_item_price=650
+var second_item_price=100
+var first_item_quantity=3
+var second_item_quantity=7
+var shipping_charges= 100
+var total = first_item_price*first_item_quantity+second_item_price*second_item_quantity
+document.write(    "<h1>Shopping Cart    </h1>"+ "<br>" + "price of item 1 is " + first_item_price + "<br>"+ "Quantity of item 1 is" + first_item_quantity + "<br>" + "price of item 2 is " + second_item_price + "<br>" + "quantity of 2 is " + second_item_quantity + "<br>" + "shipping charges is " + shipping_charges + "<br>" + "total cost of your order is " + total )
+
