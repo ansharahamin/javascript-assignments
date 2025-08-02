@@ -193,11 +193,51 @@
 
 
 // Qno7
-var first_item_price=650
-var second_item_price=100
-var first_item_quantity=3
-var second_item_quantity=7
-var shipping_charges= 100
-var total = first_item_price*first_item_quantity+second_item_price*second_item_quantity
-document.write(    "<h1>Shopping Cart    </h1>"+ "<br>" + "price of item 1 is " + first_item_price + "<br>"+ "Quantity of item 1 is" + first_item_quantity + "<br>" + "price of item 2 is " + second_item_price + "<br>" + "quantity of 2 is " + second_item_quantity + "<br>" + "shipping charges is " + shipping_charges + "<br>" + "total cost of your order is " + total )
+// var first_item_price=650
+// var second_item_price=100
+// var first_item_quantity=3
+// var second_item_quantity=7
+// var shipping_charges= 100
+// var total = first_item_price*first_item_quantity+second_item_price*second_item_quantity
+// document.write(    "<h1>Shopping Cart    </h1>"+ "<br>" + "price of item 1 is " + first_item_price + "<br>"+ "Quantity of item 1 is" + first_item_quantity + "<br>" + "price of item 2 is " + second_item_price + "<br>" + "quantity of 2 is " + second_item_quantity + "<br>" + "shipping charges is " + shipping_charges + "<br>" + "total cost of your order is " + total )
 
+// Qno8
+// marksheet
+// var total_marks = 980
+// var obtained_marks = 804
+// var percentage = obtained_marks/total_marks*100
+// document.write("<h1>Marksheet</h1>" + "</br>" + "total marks : " + total_marks + "<br>" + "obtained marks : " + obtained_marks + "<br>" + "percentage :" + percentage + "%" )
+
+// Qno9
+// currency conversion
+// var dollar = 10
+// var riyal =  25
+// var total_in_pkr = (dollar*104.80) + (riyal*28)
+// document.write("<h1>Marksheet</h1>" + "</br>" + "the total currency in pkr = " +  total_in_pkr)
+
+// Qno10
+// var num =5
+// var answer = (((num+5) *10)/2)
+// document.write("the answer is : " + answer)
+
+// Qno11
+// var current_year=2016
+// var birth_year= 1992
+// age1 = current_year-birth_year     // if birthday has passed
+// age2 = current_year-birth_year-1   // if birthday has not passed yet
+// document.write("<h1>Age Calculator</h1> " + "</br>" + "Current_year : " + current_year + "</br>" + "birth_year : " + birth_year+ "<br>" + "Your age is either : " + age1 + " or " + age2+ "years old")
+
+// Qno12
+// var radius = 20
+// pie=3.142
+// circum= 2*pie*radius
+// area= pie*(radius**2)
+// document.write("<h1>the geometrizer</h1>" + "<br>" + "radius of a circle : " + radius + "<br>" + "the circumference is : " + circum + "<br>" + "the area of circle is : " + area )
+
+// Qno13
+// var fav_snack = "chocolate chips"
+// var current_age = 15
+// var maximum_age = 65
+// var amount_of_snack_per_day=3
+// var total_chocolate_chips=(maximum_age-current_age)*3
+// document.write( "<h1>The Life Time Supply Calculator</h1>" + "<br>"+ "You will need " + total_chocolate_chips+ " chocolate chips to last you the ripe  old age of " + maximum_age)
