@@ -189,15 +189,40 @@
 // }
 
 // Qno10
-temp=+prompt("Enter temperature of your area")
-if(temp>40){
-    alert("It is too hot outside")
-}else if(temp>=30 && temp<=40){
-    alert("The Weather today is Normal")
-}else if(temp>=20 && temp<=30){
-    alert("Today's Weather is Cool")
-}else if(temp>=10 && temp<=20){
-    alert("It's too cold outside")
-}else{
-    alert("Invalid temperature")
-}
+// temp=+prompt("Enter temperature of your area")
+// if(temp>40){
+//     alert("It is too hot outside")
+// }else if(temp>=30 && temp<=40){
+//     alert("The Weather today is Normal")
+// }else if(temp>=20 && temp<=30){
+//     alert("Today's Weather is Cool")
+// }else if(temp>=10 && temp<=20){
+//     alert("OMG! Today's weather is so cool")
+// }else{
+//     alert("Invalid temperature")
+// }
+
+//  Qno11
+// Calculator
+// var num1 = +prompt("Enter first number:");
+// var num2 = +prompt("Enter second number:");
+// var operator = prompt("Enter operator (+, -, *, /):");
+// if (operator==="+"){
+//     console.log(num1+num2);
+// }else if(operator==="-"){
+//     console.log(num1-num2);
+
+// }else if(operator==="*"){
+//        console.log(num1*num2);
+// }else if(operator==="/"){
+//     if (num2 === 0){
+//         console.log("Error: Division by zero is not possible.");
+//     }else{
+//         console.log(num1/num2);
+//     }
+// }else if(operator==="%"){
+//        console.log(num1%num2);
+// }else{
+//     console.log("Enter a valid operator: ");
+// }
+
