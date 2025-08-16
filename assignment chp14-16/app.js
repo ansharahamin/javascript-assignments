@@ -102,21 +102,37 @@ var studentNamesMixed = [true,2,"Dua"]
 // document.write("<h1>String: </h1>" + string + "<br>");
 
 // =====Qno13=======
-// var devices = ["keyboard", "mouse", "printer", "monitor"];
-// document.write("<h1>Devices: </h1>" + devices + "<br>");
-// document.write("<h1>Out:</h1>" + devices[0]);
-// document.write("<h1>Out:</h1>" + devices[1]);
-// document.write("<h1>Out:</h1>" + devices[2]);
-// document.write("<h1>Out:</h1>" + devices[3]);
+// fifo
+// var devices = []
+// devices.push("keyboard");
+// devices.push("mouse");
+// devices.push("printer");
+// devices.push("monitor");
+// document.write("<h1> Devices : </h1>" + devices + "<br>");
+// returnedValue = devices.shift();
+// document.write("<h1>Out:</h1>" + returnedValue+ "<br>");
+// returnedValue = devices.shift();
+// document.write("<h1>Out:</h1>" + returnedValue+ "<br>");
+// returnedValue = devices.shift();
+// document.write("<h1>Out:</h1>" + returnedValue+ "<br>");
+// returnedValue = devices.shift();
+// document.write("<h1>Out:</h1>" + returnedValue+ "<br>");
 
 // =====Qno14=======
+// lifo
+// var devices = []
+// devices.push("keyboard");
+// devices.push("mouse");
+// devices.push("printer");
+// devices.push("monitor");
+// document.write("<h1> Devices : </h1>" + devices + "<br>");
+// console.log(devices.length);
+// var len = devices.length;
+// for(var i=0; i<len; i++){
+//   returnedValue = devices.pop();
+// document.write("<h1>Out:</h1>" + returnedValue + "<br>");
+// }
 
-// var devices = ["keyboard", "mouse", "printer", "monitor"];
-// document.write("<h1>Devices: </h1>" + devices + "<br>");
-// document.write("<h1>Out:</h1>" + devices[3]);
-// document.write("<h1>Out:</h1>" + devices[2]);
-// document.write("<h1>Out:</h1>" + devices[1]);
-// document.write("<h1>Out:</h1>" + devices[0]);
 
 // =====Qno15=======
 
