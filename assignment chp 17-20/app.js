@@ -85,14 +85,18 @@
 // var A = ["cake", "apple pie", "cookie", "chips", "patties"]
 // userinput=prompt("Welcome to ABC Bakery. What do you want to order sir/ma'am?").toLowerCase();
 
-
-//     if(A.includes(userinput)){
-//        document.write( userinput+  " is  <b> available</b> in our bakery at index "+A.indexOf(userinput) )
+// found = false;
+// for (i=0;i<A.length;i++){
+//     if(userinput===A[i]){
+//         console.log( userinput + " is available in our bakery at index " + i);
+//         found=true;
+//         break;
 //     }
-//     else{
-//        document.write( userinput+  " is  <b> not available</b> in our bakery " )
-
-//     }
+    
+// }
+// if(!found){
+//     console.log( userinput + " is not available in our bakery");
+// }
 
 
 
@@ -130,3 +134,5 @@
 // for (i = 5; i<=100; i+=5){
 //     document.write(i+",")
 // }
+
+// ====The End====
