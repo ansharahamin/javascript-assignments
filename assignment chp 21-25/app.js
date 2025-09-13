@@ -77,3 +77,43 @@
 // var titlecase4 = LName.slice(1).toLowerCase()//han
 // fullName = fName.concat(" "+LName)
 // alert("Hello " + fullName)
+
+// =========QNo7========//
+
+// 7. Write a program to replace the “Hyder” to “Islam” in the
+// word “Hyderabad” and display the result in your browser.
+
+// var word = "Hyderabad"
+//  result = word.replace("Hyder","Islam")
+// console.log(word);
+// console.log(result);
+
+// Qno8
+
+// 8. Write a program to replace all occurrences of “and” in the
+// string with “&” and display the result in your browser.
+
+// var message = "Ali and Sami are best friends. They play cricket and football together";
+// var change = message.replaceAll("and","&")
+// console.log(change);
+
+// Qno09
+// 9. Write a program that converts a string “472” to a number 472. Display the values & types in your browser.
+// var str = "472"
+// var num = Number(str)
+// document.write("value: " + str +"<br>" + "Type :" + typeof num +"<br>" )
+// console.log(typeof num);
+
+// var str2 = 472
+// var num2 = String(str2)
+// document.write("value: " + str2 +"<br>" + "Type :" + typeof num2 )
+// console.log(typeof num2);
+
+
+// QNo10
+
+// 10. Write a program that takes user input. Convert and
+// show the input in capital letters.
+var fruit = prompt("ENter your favourite fruit")
+var upper = fruit.upper()
+console.log(upper);
