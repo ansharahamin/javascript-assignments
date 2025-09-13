@@ -114,6 +114,60 @@
 
 // 10. Write a program that takes user input. Convert and
 // show the input in capital letters.
-var fruit = prompt("ENter your favourite fruit")
-var upper = fruit.upper()
-console.log(upper);
+
+// var fruit = prompt("ENter your favourite fruit")
+// var upper = fruit.toUpperCase()
+// console.log(upper);
+
+// QNo11
+ 
+// 11. Write a program that takes user input. Convert and show the input in title case.
+// titlecase for a word
+// var word = prompt("Enter a word to make it title case " )||"Javascript"
+// var titlecase = word.charAt(0).toUpperCase()
+// titlecase += word.slice(1).toLowerCase()
+// console.log(titlecase);
+
+// title case for a sentence without method
+
+// var sentence = prompt("Enter a sentence to make it title case " )||"Javascript is a fun"
+// var result =""
+// upper = true
+// for (var i = 0; i < sentence.length; i++) {
+//     if (upper) {
+//         result += sentence[i].toUpperCase()
+//         upper = false
+//     } else {
+                
+//             result += sentence[i].toLowerCase()
+//     }
+//     if (sentence[i]===" ") {
+//     upper=true
+//     result +=sentence[i].toUpperCase()
+// }
+// }
+
+// console.log(result);
+
+// title case for a sentence with methods
+
+// var sentence = prompt("Enter a sentence to make it title case " )||"Javascript is a fun"
+// var arr = sentence.split(" ")
+// var titleCase = []
+// for (var i =0 ;i < arr.length ;i++) {
+//    var fchr = arr[i].slice(0,1).toUpperCase()
+//    var otherchr = arr[i].slice(1).toLowerCase()
+//   titleCase.push(fchr+otherchr)
+
+// }
+// result=titleCase.join(" ")
+// console.log(result);
+
+// Qno12
+// 12. Write a program that converts the variable num to string.
+// var num = 35.36 ;
+// Remove the dot to display “3536” display in your browser.
+
+var num = 35.36
+var str = num.toString().replace(".","")
+document.write( "number: " + num + "<br>"+ "result: "+ str);
