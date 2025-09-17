@@ -164,6 +164,8 @@
 // console.log(result);
 
 // Qno12
+
+
 // 12. Write a program that converts the variable num to string.
 // var num = 35.36 ;
 // Remove the dot to display “3536” display in your browser.
@@ -172,3 +174,61 @@
 // var str = num.toString().replace(".","")
 // document.write( "number: " + num + "<br>"+ "result: "+ str);
 
+//=========Qno13==========
+
+// 13. Write a program to take user input and store username
+// in a variable. If the username contains any special symbol
+// among [@ . , !], prompt the user to enter a valid username.
+// For character codes of [@ .
+
+// Note:
+// ASCII code of ! is 33
+// ASCII code of , is 44
+// ASCII code of . is 46
+// ASCII code of @ is 64
+
+// var username = prompt("Enter your name: ")
+// invalid = false
+// for (var i = 0; i < username.length; i++) {
+//     code = username.charCodeAt(i)
+//     if(code===33||code===44||code===46||code===64){
+//         invalid=true
+//         break;
+//     }
+
+// }
+
+// if(invalid){
+//      alert("invalid username")
+
+// }else{
+//     alert("login successfull!")
+    
+// }
+
+
+// ====Qno14=====
+
+//14. You have an arrayA = [cake”, “apple pie”, “cookie”, “chips”, “patties”]
+// Write a program to enable “search by user input” in an
+// array. After searching, prompt the user whether the given
+// item is found in the list or not.
+// Note: Perform case insensitive search. Whether the user
+// enters cookie, Cookie, COOKIE or coOkIE, program
+// should inform about its availability. Example:
+
+// var arr = ["cake","apple pie","cookie","chips","patties"]
+// var userInput = prompt("Welcome to ABC Bakery!! \n What do you want to order Sir/Ma,am")
+// flag = false
+// for (var i = 0; i < arr.length; i++) {
+//     if(userInput.toLowerCase()===arr[i]){
+//         flag =true
+//         alert( userInput.toLowerCase()+" is available at index : "+ i +" in our bakery")
+    
+//     }
+   
+// }
+// if (!flag) {
+//     alert( userInput.toLowerCase()+" is not available in our bakery")
+
+// }
