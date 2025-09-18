@@ -44,13 +44,34 @@ var str = "Kashmir (/ˈkæʃmɪər/ KASH-meer or /kæʃˈmɪər/ kash-MEER) is t
 //     document.write("The absolute value of " + num + " is " + abs)
 // }
  
-for (let i = 0; i < 6; i++) {
-    var dice = Math.ceil(Math.random()*6)
-  document.write("random dice value:  "+ dice +"<br>") ;
+// for (let i = 0; i < 6; i++) {
+//     var dice = Math.ceil(Math.random()*6)
+//   document.write("random dice value:  "+ dice +"<br>") ;
 //  var diceFaces = ["⚀","⚁","⚂","⚃","⚄","⚅"];
 
 //   document.write("You rolled: " + diceFaces[dice - 1] + "<br>");
 
-}
+// }
+
+// var keyboardChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789`~!@#$%^&*()-_=+[{]}\\|;:'\",<.>/? ";
+// var password = ""
+// for (let i = 0; i < 10; i++) {
+// var random = Math.floor(Math.random()*keyboardChars.length)  
+// password+=keyboardChars[random]
+// }
+// console.log(password);
+// var password = ""
+// for (var i = 0; i <= 10; i++) {
+//   var pass = Math.floor(Math.random()*10)
+// password+=keyboardChars[pass]
+// }
+// console.log(password);
+
+// date
+
+// var date = new Date()
+// day = date.getDay()
+// arr = ["sun","Mon","tue" , "wed" ,"thur" ,"fri","sat"]
+// console.log(arr[day]);
 
 
