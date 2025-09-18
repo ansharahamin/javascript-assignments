@@ -232,3 +232,97 @@
 //     alert( userInput.toLowerCase()+" is not available in our bakery")
 
 // }
+
+// ======Qno15=====
+
+// var password = prompt("Enter your password:")
+// if (password.length>=6) {
+//     alert("valid")
+// } else {
+//     alert("the password must be at least 6 charactar!! ")
+// }
+// let firstChrCode= password.charCodeAt(0)
+// if (firstChrCode >=48 && firstChrCode<=57 ) {
+//     alert("INvalid")
+// } else {
+//         alert("valid")
+
+// }
+// let hasLetter = false
+// let hasDigit = false
+
+// for (let i = 0; i < password.length; i++) {
+//     code = password.charCodeAt(i)
+//     if ((code>=65&&code<=90)||(code>=97&&code<=122)) {
+//         hasLetter=true
+
+//     }
+//     if(code >= 48 && code <=57){
+//         hasDigit=true
+
+//     }
+// }
+// if(hasLetter&&hasDigit){
+//     alert("password is valid")
+// }
+
+
+// ===========Updated==========\\
+
+let isvalid = false
+   
+while (!isvalid) {
+
+ let defaultPassword = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789`~!@#$%^&*()-_=+[{]}\\|;:'\",<.>/? ";
+    var result=""
+    for (let i = 0; i < 6; i++) {
+        let randomIndex = Math.floor(Math.random()*defaultPassword.length)
+        result +=defaultPassword[randomIndex]
+         
+    }
+
+   let password = prompt("enter your password:",result)
+//    if user did not enter anything
+   if(password===null){
+    break;
+   }
+let error = []
+if(password.length<6){
+    error.push("❌ Password must be at least 6 characters long.")
+}
+let firstChrCode = password.charCodeAt(0)
+
+if(firstChrCode>=48 && firstChrCode<=57){ //0-9
+    error.push("❌ Password must not start with a number.")
+}
+
+let hasLetter = false
+let hasDigit = false
+
+for (let i = 0; i < password.length; i++) {
+    code = password.charCodeAt(i)
+if((code >=65 && code<=90) ||(code >=97 && code <=122)) {
+    hasLetter=true
+}   
+if(code >=48 && code<=57)  {
+    hasDigit=true
+}   
+}
+
+if(!hasLetter){
+    error.push("❌ Password must contain at least one letter.")
+}
+if(!hasDigit){
+    error.push("❌ Password must contain at least one digit.")
+}
+
+//  final checking
+
+if(error.length>0){
+    alert("Your password has the following issue: \n\n" +error.join("\n")+ "\n\n please try again!" )
+}else{
+    isvalid=true
+    alert("✅ Password is valid")
+}
+
+}
