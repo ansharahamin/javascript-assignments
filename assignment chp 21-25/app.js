@@ -327,17 +327,33 @@
 
 // }
 // ========Qno16===========
-var university = "University of Karachi";
-splt = university.split("")
+// var university = "University of Karachi";
+// splt = university.split("")
 
-console.log(splt);
-var newlines = splt.join("\n")
-console.log(newlines);
+// console.log(splt);
+// var newlines = splt.join("\n")
+// console.log(newlines);
 
 // =======Qno17============
 // 17. Write a program to display the last character of a user
 // input.
-var last = prompt("Enter a word to display the last charactar of it")
-var result = last.charAt(last.length-1)
-console.log(result);
+// var last = prompt("Enter a word to display the last charactar of it")
+// var result = last.charAt(last.length-1)
+// console.log(result);
 
+// =======Qno18=====##
+// 18. You have a string “The quick brown fox jumps over the
+// lazy dog”. Write a program to count number of
+// occurrences of word “the” in given string.
+
+var str = "The quick brown fox jumps over the lazy dog" 
+var lower = str.toLowerCase() 
+var words = lower.split(" ")
+var count = 0
+for (let i = 0; i < words.length; i++) {
+   
+    if(words[i]==="the"){
+        count ++
+    }
+}
+document.write(str+"<br>"+"Number of Occurance of 'the' is: " + count)
