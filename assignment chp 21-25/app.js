@@ -269,60 +269,75 @@
 
 // ===========Updated==========\\
 
-let isvalid = false
+// let isvalid = false
    
-while (!isvalid) {
+// while (!isvalid) {
 
- let defaultPassword = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789`~!@#$%^&*()-_=+[{]}\\|;:'\",<.>/? ";
-    var result=""
-    for (let i = 0; i < 6; i++) {
-        let randomIndex = Math.floor(Math.random()*defaultPassword.length)
-        result +=defaultPassword[randomIndex]
+//  let defaultPassword = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789`~!@#$%^&*()-_=+[{]}\\|;:'\",<.>/? ";
+//     var result=""
+//     for (let i = 0; i < 6; i++) {
+//         let randomIndex = Math.floor(Math.random()*defaultPassword.length)
+//         result +=defaultPassword[randomIndex]
          
-    }
+//     }
 
-   let password = prompt("enter your password:",result)
-//    if user did not enter anything
-   if(password===null){
-    break;
-   }
-let error = []
-if(password.length<6){
-    error.push("❌ Password must be at least 6 characters long.")
-}
-let firstChrCode = password.charCodeAt(0)
+//    let password = prompt("enter your password:",result)
+// //    if user did not enter anything
+//    if(password===null){
+//     break;
+//    }
+// let error = []
+// if(password.length<6){
+//     error.push("❌ Password must be at least 6 characters long.")
+// }
+// let firstChrCode = password.charCodeAt(0)
 
-if(firstChrCode>=48 && firstChrCode<=57){ //0-9
-    error.push("❌ Password must not start with a number.")
-}
+// if(firstChrCode>=48 && firstChrCode<=57){ //0-9
+//     error.push("❌ Password must not start with a number.")
+// }
 
-let hasLetter = false
-let hasDigit = false
+// let hasLetter = false
+// let hasDigit = false
 
-for (let i = 0; i < password.length; i++) {
-    code = password.charCodeAt(i)
-if((code >=65 && code<=90) ||(code >=97 && code <=122)) {
-    hasLetter=true
-}   
-if(code >=48 && code<=57)  {
-    hasDigit=true
-}   
-}
+// for (let i = 0; i < password.length; i++) {
+//     code = password.charCodeAt(i)
+// if((code >=65 && code<=90) ||(code >=97 && code <=122)) {
+//     hasLetter=true
+// }   
+// if(code >=48 && code<=57)  {
+//     hasDigit=true
+// }   
+// }
 
-if(!hasLetter){
-    error.push("❌ Password must contain at least one letter.")
-}
-if(!hasDigit){
-    error.push("❌ Password must contain at least one digit.")
-}
+// if(!hasLetter){
+//     error.push("❌ Password must contain at least one letter.")
+// }
+// if(!hasDigit){
+//     error.push("❌ Password must contain at least one digit.")
+// }
 
-//  final checking
+// //  final checking
 
-if(error.length>0){
-    alert("Your password has the following issue: \n\n" +error.join("\n")+ "\n\n please try again!" )
-}else{
-    isvalid=true
-    alert("✅ Password is valid")
-}
+// if(error.length>0){
+//     alert("Your password has the following issue: \n\n" +error.join("\n")+ "\n\n please try again!" )
+// }else{
+//     isvalid=true
+//     alert("✅ Password is valid")
+// }
 
-}
+// }
+// ========Qno16===========
+var university = "University of Karachi";
+splt = university.split("")
+
+console.log(splt);
+var newlines = splt.join("\n")
+console.log(newlines);
+
+// =======Qno17============
+// 17. Write a program to display the last character of a user
+// input.
+var last = prompt("Enter a word to display the last charactar of it")
+var result = last.charAt(last.length-1)
+console.log(result);
+
