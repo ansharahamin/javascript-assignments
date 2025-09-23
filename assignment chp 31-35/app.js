@@ -95,7 +95,14 @@
 // document.write(sec + " seconds had passed since beginning of 2015")
 
 
-// ---------Qno08----------------\\
+// ---------Qno11----------------\\
+
+// var currentDate = new Date()
+// hour = currentDate.getHours()
+// document.write("Current Date & Time: " + currentDate + "<br>");
+// currentDate.setHours(hour-1)
+// document.write("it was : " + currentDate + "one hour ago");
+
 // ---------Qno08----------------\\
 // ---------Qno08----------------\\
 // ---------Qno08----------------\\
