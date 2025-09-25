@@ -103,6 +103,14 @@
 // currentDate.setHours(hour-1)
 // document.write("it was : " + currentDate + "one hour ago");
 
-// ---------Qno08----------------\\
+// ---------Qno12----------------\\
+
+// var currentDate = new Date()
+// var year =  currentDate.getFullYear()
+// var update = currentDate.setFullYear(year-100)
+// console.log(currentDate);
+
+
+
 // ---------Qno08----------------\\
 // ---------Qno08----------------\\
