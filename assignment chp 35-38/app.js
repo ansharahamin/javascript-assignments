@@ -71,20 +71,49 @@
 
 //============ Qno06 ===============\\
 
-function factorial(num1) {
-    for (let i = 0; i < 
-        h; i++) {
-        const element = array[i];
-        
-    }
-}
+// function factorial(num1) {
+//     result = 1
+//     for (let i = 1; i <= num1; i++) {
+//                 result*=i
+//     }
+//     return result
+// }
+// let input = Number(prompt("Enter a number"))
+// let factorialNum = factorial(input)
+
+// document.write("factorial Number of "  +"is " + factorialNum)
 
 //============ Qno07 ===============\\
 
+// function counting(start,end) {
+// result = ""
+// for (let i = start; i <= end; i++) {
+//     result+=i
+//     document.write(i + "<br>")
+   
+// }
+//  return result
+// }
 
+// var num1 = +prompt("Enter a number")
+// var num2 = +prompt("Enter a number")
+// var output =counting(num1,num2);
+// document.write(output+"<br>");
+
+//============ Qno08 ===============\\
+
+// function square(n) {
+
+//     result = 
+    
+// }
 
 //============ Qno01 ===============\\
 //============ Qno01 ===============\\
 //============ Qno01 ===============\\
 //============ Qno01 ===============\\
-//============ Qno01 ===============\\
+
+// titleCase
+// function titlecase(str) {
+//     str =
+// }
