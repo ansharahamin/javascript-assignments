@@ -116,10 +116,34 @@
 
 //======= Age Calculator ========\\
 
-let userdob = new Date(prompt("Enter your DOB: "))
-let current = new Date()
-diff =current.getFullYear()- userdob.getFullYear()
-console.log(diff);
+// let userdob = new Date(prompt("Enter your DOB: "))
+// let current = new Date()
+// diff =current.getFullYear()- userdob.getFullYear()
+// dob=userdob.getFullYear()
+// document.write("Your Age is: "+diff+"<br>"+"Your Birth Year is: "+dob);
 
 // ---------Qno14----------------\\
+
+// var customerName = prompt("Enter Your Name: ")
+// var month = new Date().getMonth()
+// var  monthArray = [  "January", 
+//   "February", 
+//   "March", 
+//   "April", 
+//   "May", 
+//   "June", 
+//   "July", 
+//   "August", 
+//   "September", 
+//   "October", 
+//   "November", 
+//   "December"]
+// console.log(monthArray[month])
+// var NoOfUnits = 410
+// var chargesPerUnit = 16
+// var netAmount = NoOfUnits*chargesPerUnit
+// var lateCharges = 350
+// var AfterDueDate = netAmount+lateCharges
+
+// document.write("<h1>K-Electric Bill</h1>" + "<br>" + "Customer's Name:"  + customerName + "<br>" + "Month: "+ monthArray[month]+"<br>"+"No of Units: " + NoOfUnits+"<br>"+"Charges Per Unit: " + chargesPerUnit+"<br>"+"Net Amount Payable within Due Date: " + netAmount+"<br>"+"Late Payment Surcharge: " +lateCharges +"<br>"+"Gross Amount Payable (after Due Date): " +AfterDueDate )
 
