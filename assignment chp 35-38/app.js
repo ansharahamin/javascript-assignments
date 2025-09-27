@@ -86,29 +86,40 @@
 //============ Qno07 ===============\\
 
 // function counting(start,end) {
-// result = ""
-// for (let i = start; i <= end; i++) {
-//     result+=i
-//     document.write(i + "<br>")
-   
+//     for (let i = start; i <= end; i++) {
+//         console.log(i);
+        
+//     }
 // }
-//  return result
-// }
+// var input1 = Number(prompt("Enter A Number: "))
+// var input2 = Number(prompt("Enter A Number: "))
+// counting(input1,input2)
 
-// var num1 = +prompt("Enter a number")
-// var num2 = +prompt("Enter a number")
-// var output =counting(num1,num2);
-// document.write(output+"<br>");
 
 //============ Qno08 ===============\\
 
-// function square(n) {
-
-//     result = 
-    
+// function hyp(base,perp) {
+//     function square(n) {
+//       return  n**2
+//     }
+// var hypSquare = square(base)+square(perp)
+// return hypSquare;
 // }
+// var input1 = Number(prompt("Enter Base Value: "))
+// var input2 = Number(prompt("Enter the Value of perpendicular: "))
+// console.log(hyp(input1,input2));
 
-//============ Qno01 ===============\\
+
+//============ Qno09 ===============\\
+
+// function Area(w, h) {
+//     return w*h
+// }
+// var input1 = Number(prompt("Enter Width Value: "))
+// var input2 = Number(prompt("Enter the Value of height: "))
+// console.log(Area(input1,input2));
+
+
 //============ Qno01 ===============\\
 //============ Qno01 ===============\\
 //============ Qno01 ===============\\
