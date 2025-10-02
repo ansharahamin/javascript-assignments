@@ -120,11 +120,48 @@
 // console.log(Area(input1,input2));
 
 
-//============ Qno01 ===============\\
-//============ Qno01 ===============\\
-//============ Qno01 ===============\\
 
-// titleCase
-// function titlecase(str) {
-//     str =
+//============ Qno10 ===============\\
+
+// function palindrome() {
+//    var word = prompt("Enter a word")
+//     result=""
+//     check = ""
+//     for (let i = word.length-1; i >= 0; i--) {
+//         result+=word[i]
+//     }
+// if (word===result) {
+// document.write("It is a palindrome")
+    
+// } else {
+//     document.write("it is not a palindromde");
+  
 // }
+// }
+// palindrome()
+
+//============ Qno11 ===============\\
+
+function titlecase() {
+    var sentence =prompt("enter a sentence to make it title case")
+    var result=""
+    var MakeUpper=true;
+    for (let i = 0; i < sentence.length; i++) {
+        if (MakeUpper) {
+           
+            result+=sentence[i].toUpperCase()
+             MakeUpper=false;
+        } else {
+            
+            result+=sentence[i].toLowerCase()
+            
+        }
+    if(sentence[i]===" "){
+        MakeUpper=true
+    }
+    }
+    console.log(result);
+    
+}
+titlecase()
+//============ Qno01 ===============\\
