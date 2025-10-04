@@ -7,8 +7,14 @@ var display = document.getElementById("display")
 function appendToDisplay(input) {//function no1
   //operator
   if(["+","-","*","/","%"].includes(input)){
+    if (operator&&num2) {
+      calculate()
+      return
+    }
         if (operator !== "" && num2 === "") {
+          
       return; // avoid double operator
+
     }
     operator = input
     isSecondNum =true
@@ -24,6 +30,14 @@ function appendToDisplay(input) {//function no1
 }
 function calculate(){
   let result = 0
+  if (operator=== "") {
+    if (num1 !== "" ) {
+      result=parseFloat(num1)**2
+      display.value = result
+      num1 += result.toString()
+      return
+    }
+  }
   const n1 = parseFloat(num1)
   const n2 = parseFloat(num2)
   switch (operator) {
