@@ -1,58 +1,83 @@
-let num1 = "";
-let num2 = "";
-let operator = "";
-let isSecondNumber = false;
-let display = document.getElementById("display");
+var num1 =""
+var num2=""
+var operator =""
+isSecondNum = false
+var display = document.getElementById("display")
 
-function appendToDisplay(input) {
-    if (!isSecondNumber && operator!=="+"&& operator!=="-"&& operator!=="*"&& operator!=="/" ) {
-        num1 += input;
-    }else if (operator==="+"||operator==="-"||operator==="*"||operator==="/") {
-        operator = input;
-        isSecondNumber=true
-    }else if (isSecondNumber&& operator!=="+"&& operator!=="-"&& operator!=="*"&& operator!=="/") {
-        num2 += input;
+function appendToDisplay(input) {//function no1
+  //operator
+  if(["+","-","*","/","%"].includes(input)){
+        if (operator !== "" && num2 === "") {
+      return; // avoid double operator
     }
-  display.value += input;
-
-//   if (["+", "-", "*", "/"].includes(input)) {
-//     operator = input;
-//     num1 = display.value.slice(0, -1);
-//   }
-}
-// function clearDisplay() {
-//     // display.value=""
-
-
-
-function calculate() {
-    // let operatorIndex = display.value.indexOf(operator);
-    // num2 = display.value.slice(operatorIndex + 1);
-num1 = Number(num1);
-num2  = Number(num2);
-  let result = "";
-  if (operator === "+") {
-    result = n1 + n2;
-  } else if (operator === "-") {
-    result = n1 - n2;
-  } else if (operator === "*") {
-    result = n1 * n2;
-  } else if (operator === "/") {
-    result = n1 / n2;
+    operator = input
+    isSecondNum =true
+  }else{//num
+    if (!isSecondNum) {
+      num1 += input
+      
+    }else{
+     num2+=input
+    }
   }
-  display.value = result;
-  // num2 = display.value
-  // try {
-  //      display.value=eval(display.value)
-  // } catch (error) {
-  //      display.value="Error"
-  // }
-  num2=""
-  num1=result
+  display.value += input
 }
-function clearDisplay() {
-    display.value = "";
-    num1 = "";
-    num2 = "";
-    operator = "";
+function calculate(){
+  let result = 0
+  const n1 = parseFloat(num1)
+  const n2 = parseFloat(num2)
+  switch (operator) {
+    case "+":
+      result = n1 +n2
+      break;
+    case "-":
+      result = n1 -n2
+      break;
+    case "*":
+      result = n1 *n2
+      break;
+    case "/":
+      if (n2!==0) {
+        result = n1 /n2
+      } else {
+        result= "Error"
+      }
+      
+      break;
+    case "%":
+
+         result = n1 %n2
+      break;
+  
+    default:
+      result = "Invalid"
+      break;
   }
+  display.value = result
+
+  //reset
+  num1 = result.toString()
+  num2 = ""
+  operator = ""
+  isSecondNum=false
+}
+
+function clearDisplay(){
+  display.value = ""
+  num1 = ""
+  num2 = ""
+  operator =""
+  isSecondNum = false
+}
+
+function Backspace(){
+  display.value = display.value.slice(0,-1)
+  if(!isSecondNum){
+    num1 = num1.slice(0,-1)
+  }else if(num2 !== ""){
+    num2 = num2.slice(0,-1)
+  }else if(operator!==""){
+    operator=""
+    isSecondNum=false
+  }
+}
