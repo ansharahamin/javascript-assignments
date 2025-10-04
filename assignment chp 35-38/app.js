@@ -142,26 +142,69 @@
 
 //============ Qno11 ===============\\
 
-function titlecase() {
-    var sentence =prompt("enter a sentence to make it title case")
-    var result=""
-    var MakeUpper=true;
-    for (let i = 0; i < sentence.length; i++) {
-        if (MakeUpper) {
+// function titlecase() {
+//     var sentence =prompt("enter a sentence to make it title case")
+//     var result=""
+//     var MakeUpper=true;
+//     for (let i = 0; i < sentence.length; i++) {
+//         if (MakeUpper) {
            
-            result+=sentence[i].toUpperCase()
-             MakeUpper=false;
-        } else {
+//             result+=sentence[i].toUpperCase()
+//              MakeUpper=false;
+//         } else {
             
-            result+=sentence[i].toLowerCase()
+//             result+=sentence[i].toLowerCase()
             
-        }
-    if(sentence[i]===" "){
-        MakeUpper=true
-    }
-    }
-    console.log(result);
+//         }
+//     if(sentence[i]===" "){
+//         MakeUpper=true
+//     }
+//     }
+//     console.log(result);
     
+// }
+// titlecase()
+//============ Qno12 ===============\\
+
+// function longestWord(str) {
+//     var word = str.split(" ")
+//     //assume word[0] is longest
+//   let longest = word[0]
+//     for (let i = 1; i < word.length; i++) {
+//         if (word[i].length>longest.length) {
+//            longest=word[i]
+            
+//         }
+//     }
+//     return longest
+// }
+// var input = prompt("Enter a sentence tofind the longest word: ")
+// console.log(longestWord(input));
+
+//============ Qno13 ===============\\
+
+// function letterCheck(str,letter) {
+  
+//  return   str.split(letter).length-1
+
+// }
+// var word = prompt("Enter word")
+// var lettertofind = prompt("Enter letter")
+
+// console.log(letterCheck(word,lettertofind));
+
+//============ Qno14 ===============\\
+let radius = Number(prompt("Enter the radius of a circle: "))
+function calcCircumference() {
+    
+    let circumference = 2*3.14*radius
+        return circumference.toFixed(2)
 }
-titlecase()
-//============ Qno01 ===============\\
+
+console.log(calcCircumference());
+
+function Area() {
+    let Area = 3.14*radius**2 
+    return Area.toFixed(2)
+}
+console.log(Area());
