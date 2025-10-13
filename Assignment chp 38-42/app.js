@@ -83,22 +83,79 @@
 
 // =========Qno 06===========\\
 
-function deleteVowels(sentence) {
-  var result = ""
-  for (let i = 0; i < sentence.length; i++) {
-  var  check = sentence[i].toLowerCase()
+// function deleteVowels(sentence) {
+//   var result = ""
+//   for (let i = 0; i < sentence.length; i++) {
+//   var  check = sentence[i].toLowerCase()
 
-    if (check!=='a'&&check!=='e'&&check!=='i'&&check!=='o'&&check!=='u') {
-      result+= sentence[i]
-    }
+//     if (check!=='a'&&check!=='e'&&check!=='i'&&check!=='o'&&check!=='u') {
+//       result+= sentence[i]
+//     }
+//   }
+//   return result
+// }
+// var userInput = prompt("Enter a sentence max 25 words") 
+// console.log( deleteVowels(userInput));
+
+// =========Qno 07===========\\
+
+// function vowel(text) {
+//   var count = 0
+//   var text = text.toLowerCase()
+//   for (let i = 0; i < text.length; i++) {
+
+//     var pair = text[i]+text[i+1]
+
+//     switch (pair) {
+//       case 'aa':
+//        case 'ae':
+//        case 'ai':
+//        case 'ao':
+//        case 'au':
+//        case 'ea':
+//        case 'ee':
+//        case 'ei':
+//        case 'eo':
+//        case 'eu':
+//        case 'ia':
+//        case 'ie':
+//        case 'ii':
+//        case 'io':
+//        case 'iu':
+//        case 'oa':
+//        case 'oe':
+//        case 'oi':
+//        case 'oo':
+//        case 'ou':
+//        case 'ua':
+//        case 'ue':
+//        case 'ui':
+//        case 'uo':
+//        case 'uu':
+//       console.log(pair);
+      
+//         break;
+    
+
+//     }
+//   }
+//   return count
+// }
+
+// var input = prompt("Enter the sentence to check the succcession of vowels") 
+// console.log(vowel(input));
+
+// =========Qno 08===========\\
+
+function conversion(km) {
+  function meter() {
+    
   }
-  return result
-}
-var userInput = prompt("Enter a sentence max 25 words") 
-console.log( deleteVowels(userInput));
+  return km*1000
 
-// =========Qno 04===========\\
-// =========Qno 04===========\\
+}
+
+var kilometer = +prompt("Enter  the distance of 2 cities in km") 
 // =========Qno 04===========\\
 // =========Qno 04===========\\
 // =========Qno 04===========\\
