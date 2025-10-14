@@ -149,9 +149,9 @@
 
 function conversion(km) {
   function meter() {
-    
+    var KIloMeterToMeter = km*1000
   }
-  return km*1000
+
 
 }
 
