@@ -147,16 +147,41 @@
 
 // =========Qno 08===========\\
 
-function conversion(km) {
-  function meter() {
-    var KIloMeterToMeter = km*1000
-  }
+// function conversion(km) {
+//   function meter() {
+//     var KIloMeterToMeter = km*1000
+//     console.log("Distance in meters "+KIloMeterToMeter );
+    
+//   }
+//   function feet() {
+//     var KIlometerToFeet = km*3280.84
+//     console.log("Distance in feet "+KIlometerToFeet );
+//   }
+//   function inches() {
+//     var KIlometerToInches = km*39370.1
+//     console.log("Distance in inches "+KIlometerToInches);
+//   }
+//   function cm() {
+//     var KIlometerToCm = km*100000
+//     console.log("Distance in cm "+KIlometerToCm );
+//   }
+// meter()
+// feet()
+// inches()
+// cm()
+
+// }
+
+// var kilometer = +prompt("Enter  the distance of 2 cities in km") 
+// console.log(conversion(kilometer));
 
 
+// =========Qno 09===========\\
+
+
+function Calculate(x,y) {
+var overTime =   
 }
-
-var kilometer = +prompt("Enter  the distance of 2 cities in km") 
-// =========Qno 04===========\\
 // =========Qno 04===========\\
 // =========Qno 04===========\\
 // =========Qno 04===========\\
