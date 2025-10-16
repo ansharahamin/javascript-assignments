@@ -26,3 +26,19 @@
 //    alert(welcome)
 // }
 // var user = prompt("Enter Your Name: ")
+
+// =========  Qno 02 ===========//
+
+function ShowAlert(tysm) {
+
+    var thankyouMsg = "hello "+greet+" Thank You for purchasing this!!"
+   alert(thankyouMsg)
+}
+var user = prompt("Enter Your Name: ")
+
+
+// =========  Qno 01 ===========//
+// =========  Qno 01 ===========//
+// =========  Qno 01 ===========//
+// =========  Qno 01 ===========//
+// =========  Qno 01 ===========//
