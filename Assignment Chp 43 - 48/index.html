@@ -1,32 +1,152 @@
-<!DOCTYPE html>
+<doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <style>
 
-        .img{
+        /* Qno2 */
+
+        /* .img {
             display: flex;
             justify-content: space-evenly;
             padding-top: 10px;
-        }
+        } */
 
     </style>
 </head>
+
+
+
+
 <body>
     <!-- Cw -->
     <!-- <img src="https://assets-v2.lottiefiles.com/a/a43824be-1176-11ee-91d6-1fdbb5eed288/xvgUBESRAV.gif" onmouseover="run(this)" onmouseout="change(this)" alt="">
     <img src="https://media.istockphoto.com/id/2147494346/vector/star-icon.jpg?s=612x612&w=0&k=20&c=Fh5AstT32r46t57EG8rNvwTpm3fX9L40QOJ6G9peshw=" onmouseover="zoom(this)" onmouseout="zoomOut(this)" alt="" srcset=""> -->
 
     <!-- Qno 01 -->
-     
+
     <!-- <a href="" id="link" onclick="alrt(user)">Link</a> -->
 
-   <!-- Qno 02 -->
-<div class="img"><img onclick="ShowAlert()" width="350px" src="https://img.freepik.com/free-photo/elegant-smartphone-composition_23-2149437106.jpg?semt=ais_hybrid&w=740&q=80" alt="" srcset="" id="mobimage"> <img onclick="ShowAlert()" width="350px" src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bW9iaWxlJTIwcGhvbmV8ZW58MHx8MHx8fDA%3D&fm=jpg&q=60&w=3000" alt="" srcset="" id="mobimage"><img onclick="ShowAlert()" width="350px" src="https://images.unsplash.com/photo-1580910051074-3eb694886505?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fG1vYmlsZSUyMHBob25lfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=500" alt="" srcset="" id="mobimage"><img onclick="ShowAlert()" width="350px" src="https://images.unsplash.com/photo-1589492477829-5e65395b66cc?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=387" alt="" srcset="" id="mobimage"></div>
+    <!-- Qno 02 -->
+    <!-- <div class="img"><img onclick="ShowAlert()" width="350px"
+            src="https://img.freepik.com/free-photo/elegant-smartphone-composition_23-2149437106.jpg?semt=ais_hybrid&w=740&q=80"
+            alt="" srcset="" id="mobimage1"> <img onclick="ShowAlert()" width="350px"
+            src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bW9iaWxlJTIwcGhvbmV8ZW58MHx8MHx8fDA%3D&fm=jpg&q=60&w=3000"
+            alt="" srcset="" id="mobimage2"><img onclick="ShowAlert()" width="350px"
+            src="https://images.unsplash.com/photo-1580910051074-3eb694886505?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fG1vYmlsZSUyMHBob25lfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=500"
+            alt="" srcset="" id="mobimage3"><img onclick="ShowAlert()" width="350px"
+            src="https://images.unsplash.com/photo-1589492477829-5e65395b66cc?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=387"
+            alt="" srcset="" id="mobimage4"></div> -->
+
+            <!-- ==========Qno 03================ -->
+<h1 class="text-center fw-bold mt-5">Index name class</h1>
+<br><br>
+<div class="table text-center">
+<table class="table table-striped fw-semibold mx-0">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Class</th>
+      <th scope="col">Delete Record</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>10</td>
+              <td><button onclick="deleteRow(this)"  class="btn btn-outline-danger btn-sm"  type="button">Delete</button></td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>9</td>
+              <td><button onclick="deleteRow(this)"  class="btn btn-outline-danger btn-sm"  type="button">Delete</button></td>
+
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>Jack</td>
+      <td>8</td>
+              <td><button onclick="deleteRow(this)"  class="btn btn-outline-danger btn-sm"  type="button">Delete</button></td>
+
+    </tr>
+    <tr>
+      <th scope="row">4</th>
+      <td>John</td>
+      <td>Mark</td>
+      <td>7</td>
+              <td><button onclick="deleteRow(this)" c class="btn btn-outline-danger btn-sm"  type="button">Delete</button></td>
+
+    </tr>
+    <tr>
+      <th scope="row">5</th>
+      <td>Adam</td>
+      <td>Usman</td>
+      <td>6</td>
+              <td><button onclick="deleteRow(this)" c class="btn btn-outline-danger btn-sm"  type="button">Delete</button></td>
+
+    </tr>
+    <tr>
+      <th scope="row">6</th>
+      <td>Malik</td>
+      <td>Aman</td>
+      <td>6</td>
+              <td><button onclick="deleteRow(this)" class="btn btn-outline-danger btn-sm"   type="button">Delete</button></td>
+
+    </tr>
+    <tr>
+      <th scope="row">7</th>
+
+      <td>Usman</td>
+            <td>Adam</td>
+      <td>6</td>
+              <td><button onclick="deleteRow(this)" c class="btn btn-outline-danger btn-sm"  type="button">Delete</button></td>
+
+    </tr>
+    <tr>
+      <th scope="row">8</th>
+      <td>ahmed</td>
+      <td>Asman</td>
+      <td>10</td>
+              <td><button onclick="deleteRow(this)"  class="btn btn-outline-danger btn-sm"   type="button">Delete</button></td>
+
+    </tr>
+    <tr>
+      <th scope="row">9</th>
+      <td>Arbi</td>
+      <td>Ghulam</td>
+      <td>12</td>
+              <td><button onclick="deleteRow(this)" c class="btn btn-outline-danger btn-sm"  type="button">Delete</button></td>
+
+    </tr>
+
+    <tr>
+      <th scope="row">10</th>
+         <td>Usama</td>
+      <td>Sahab</td>
    
+      <td>6</td>
+              <td><button onclick="deleteRow(this)" c class="btn btn-outline-danger btn-sm"  type="button">Delete</button></td>
+
+    </tr>
+  </tbody>
+</table>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
     <script src="app.js"></script>
+
 </body>
+
 </html>

@@ -29,15 +29,66 @@
 
 // =========  Qno 02 ===========//
 
-function ShowAlert(tysm) {
+// function ShowAlert() {
 
-    var thankyouMsg = "hello "+greet+" Thank You for purchasing this!!"
-   alert(thankyouMsg)
+//     var thankyouMsg = "hello "+user+" Thank You for purchasing this!!"
+//   sweetalert(thankyouMsg)
+// }
+// var user = prompt("Enter Your Name: ")
+// function sweetalert(product) {
+
+// Swal.fire({
+//   title: "Good job!",
+//   text: "You purchased it!",
+//   icon: "success"
+// });
+// }
+
+
+// =========  Qno 03 ===========//
+
+function deleteRow(btn){
+var row = btn.parentNode.parentNode
+function SweetAlert(confirmation) {
+    const swalWithBootstrapButtons = Swal.mixin({
+  customClass: {
+    confirmButton: "btn btn-success",
+    cancelButton: "btn btn-danger"
+  },
+  buttonsStyling: false
+});
+swalWithBootstrapButtons.fire({
+  title: "Are you sure?",
+  text: "You won't be able to revert this!",
+  icon: "warning",
+  showCancelButton: true,
+  confirmButtonText: "Yes, delete it!",
+  cancelButtonText: "No, cancel!",
+  reverseButtons: true
+}).then((result) => {
+  if (result.isConfirmed) {
+    row.remove()
+    swalWithBootstrapButtons.fire({
+      title: "Deleted!",
+      text: "This Student Record has been deleted.",
+      icon: "success"
+    });
+  } else if (
+    /* Read more about handling dismissals below */
+    result.dismiss === Swal.DismissReason.cancel
+  ) {
+    swalWithBootstrapButtons.fire({
+      title: "Cancelled",
+      text: "his Student Record is Safe :)",
+      icon: "error"
+    });
+  }
+});
 }
-var user = prompt("Enter Your Name: ")
+SweetAlert()
+}
 
 
-// =========  Qno 01 ===========//
 // =========  Qno 01 ===========//
 // =========  Qno 01 ===========//
 // =========  Qno 01 ===========//
