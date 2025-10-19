@@ -47,49 +47,76 @@
 
 // =========  Qno 03 ===========//
 
-function deleteRow(btn){
-var row = btn.parentNode.parentNode
-function SweetAlert(confirmation) {
-    const swalWithBootstrapButtons = Swal.mixin({
-  customClass: {
-    confirmButton: "btn btn-success",
-    cancelButton: "btn btn-danger"
-  },
-  buttonsStyling: false
-});
-swalWithBootstrapButtons.fire({
-  title: "Are you sure?",
-  text: "You won't be able to revert this!",
-  icon: "warning",
-  showCancelButton: true,
-  confirmButtonText: "Yes, delete it!",
-  cancelButtonText: "No, cancel!",
-  reverseButtons: true
-}).then((result) => {
-  if (result.isConfirmed) {
-    row.remove()
-    swalWithBootstrapButtons.fire({
-      title: "Deleted!",
-      text: "This Student Record has been deleted.",
-      icon: "success"
-    });
-  } else if (
-    /* Read more about handling dismissals below */
-    result.dismiss === Swal.DismissReason.cancel
-  ) {
-    swalWithBootstrapButtons.fire({
-      title: "Cancelled",
-      text: "his Student Record is Safe :)",
-      icon: "error"
-    });
-  }
-});
+
+
+// function deleteRow(btn){
+// var row = btn.parentNode.parentNode
+// function SweetAlert(confirmation) {
+//     const swalWithBootstrapButtons = Swal.mixin({
+//   customClass: {
+//     confirmButton: "btn btn-success",
+//     cancelButton: "btn btn-danger"
+//   },
+//   buttonsStyling: false
+// });
+// swalWithBootstrapButtons.fire({
+//   title: "Are you sure?",
+//   text: "You won't be able to revert this!",
+//   icon: "warning",
+//   showCancelButton: true,
+//   confirmButtonText: "Yes, delete it!",
+//   cancelButtonText: "No, cancel!",
+//   reverseButtons: true
+// }).then((result) => {
+//   if (result.isConfirmed) {
+//     row.remove()
+//     swalWithBootstrapButtons.fire({
+//       title: "Deleted!",
+//       text: "This Student Record has been deleted.",
+//       icon: "success"
+//     });
+//   } else if (
+//     /* Read more about handling dismissals below */
+//     result.dismiss === Swal.DismissReason.cancel
+//   ) {
+//     swalWithBootstrapButtons.fire({
+//       title: "Cancelled",
+//       text: "his Student Record is Safe :)",
+//       icon: "error"
+//     });
+//   }
+// });
+// }
+// SweetAlert()
+// }
+
+
+// =========  Qno 04 ===========//
+
+// function on(e) {
+//     e.src='https://www.w3schools.com/js/pic_bulbon.gif'
+//     e.style.transform = "scale(1.5)"
+//     e.style.transition = "1.5s"
+//     e.style.padding = "5px"
+// }
+// function off(e) {
+//    e.src = 'https://www.w3schools.com/js/pic_bulboff.gif' 
+//     e.style.transition = "1.5s"
+// e.style.transform = "scale(1)"
+// }
+
+// =========  Qno 05 ===========//
+
+let count = 0
+function increase() {
+    count++
+    document.getElementById("count").innerText = counter
 }
-SweetAlert()
+function decrease() {
+    count--
+    document.getElementById("count").innerText = counter
 }
 
 
-// =========  Qno 01 ===========//
-// =========  Qno 01 ===========//
 // =========  Qno 01 ===========//
 // =========  Qno 01 ===========//
