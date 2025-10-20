@@ -17,7 +17,7 @@
     background: linear-gradient(rgb(169, 238, 169),rgb(231, 231, 142));
     height: 92vmin;
     width: 90vmin;
-    border: 2px solid black;
+    border: 5px groove black;
     display: grid;
     grid-template-rows: repeat(18,1fr);
     grid-template-columns: repeat(18,1fr);
@@ -54,4 +54,83 @@ border-radius: 8px;
     font-size: 39px;
     font-weight: bold;
     font-family: "Fredericka the Great", serif;
+}
+
+.buttons {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-row {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  width: 60px;
+  height: 60px;
+  font-size: 22px;
+  border-radius: 50%;
+  border: none;
+  background-color: #333;
+  color: white;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+}
+
+button:active {
+  background-color: #ffa4a4;
+  transform: scale(0.95);
+}
+.levels {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 45px;
+}
+
+.levels button {
+  padding: 8px 10px;
+  border: none;
+  background: linear-gradient(rgb(30, 77, 27),rgb(63, 219, 15));
+  color: rgb(241, 229, 229);
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.levels button:hover {
+  background-color: #f2ffd9;
+}
+
+@media (max-width: 600px) {
+  #board {
+    width: 95vmin;
+    height: 95vmin;
+  }
+  .buttons button {
+    width: 55px;
+    height: 55px;
+    font-size: 20px;
+  }
+  .levels button {
+    padding: 6px 12px;
+    font-size: 15px;
+  }
+  .score-container {
+    flex-direction: column;
+    align-items: center;
+    
+  }
+  #score ,#highScore{
+font-size:20px;
+margin-top: 70px;
+
+  }
 }

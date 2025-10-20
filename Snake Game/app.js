@@ -141,6 +141,20 @@ if (highScore===null) {
     highScoreEval = JSON.parse(localStorage.getItem("highScore"))
     highScoreBox.innerHTML = "highScore: " +highScoreEval
 }
+function setLevel(level) {
+  if (level === 'easy') {
+    speed = 4;
+  } else if (level === 'medium') {
+    speed = 7;
+  } else if (level === 'hard') {
+    speed = 12;
+  }
+
+  // Optional sound or message
+  startGame.play()
+  Swal.fire("Level set to: " + level.toUpperCase())
+
+}
 
 window.requestAnimationFrame(main);
 window.addEventListener('keydown', e => {
@@ -177,4 +191,21 @@ window.addEventListener('keydown', e => {
         default:
             break;
     }
+
 })
+function UpArrow() {
+     inputDir.x = 0
+            inputDir.y = -1
+}
+function DownArrow() {
+  inputDir.x = 0
+            inputDir.y = 1
+}
+function LeftArrow() {
+   inputDir.x = -1
+            inputDir.y = 0
+}
+function RightArrow() {
+   inputDir.x = 1
+            inputDir.y = 0
+}
