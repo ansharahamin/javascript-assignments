@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.container{
+    background-image: url(https://i.pinimg.com/originals/c7/f4/b7/c7f4b7922cad40cd75fb214a63bec12d.gif);
+    height: 100vh;
+  
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.char{
+position: absolute;
+bottom: 10px;
+left: 10px;
+height: 250px;
+}
