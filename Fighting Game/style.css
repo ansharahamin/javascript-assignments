@@ -17,9 +17,9 @@
 .char{
 position: absolute;
 bottom: 10px;
-
+   left: 10px;
 height: 350px;
 }
 #char1{
-    left: 10px;
+ 
 }
