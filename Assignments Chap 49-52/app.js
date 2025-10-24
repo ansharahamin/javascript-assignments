@@ -1,16 +1,16 @@
 // Qno1
 
-function submitt(){
+// function submitt(){
     
-var FName = document.getElementById("fname").value
-var LName = document.getElementById("lname").value
-var email = document.getElementById("email").value
-var password = document.getElementById("password").value
-    console.log(FName,LName,email,password);
-    var para = document.getElementById("para").innerHTML = "First Name = " + FName + "</br>" + "Last Name = " + LName + "</br>"+"email = " + email + "</br>"+"password = " + password + "</br>"
+// var FName = document.getElementById("fname").value
+// var LName = document.getElementById("lname").value
+// var email = document.getElementById("email").value
+// var password = document.getElementById("password").value
+//     console.log(FName,LName,email,password);
+//     var para = document.getElementById("para").innerHTML = "First Name = " + FName + "</br>" + "Last Name = " + LName + "</br>"+"email = " + email + "</br>"+"password = " + password + "</br>"
     
-}
-
+// }
+// Qno2
 function deleteRow(btn){
 var row = btn.parentNode.parentNode
 function SweetAlert(confirmation) {
@@ -53,8 +53,41 @@ SweetAlert()
 }
 
 function edit(e) {
-    var edit = e.parentNode.parentNode
+    var currentRow = e.parentNode.parentNode//tr
+    var cells = currentRow.getElementsByTagName("td")//tds
+
+    var form = document.getElementById("form")
+    form.style.display = "block"
+
+    document.getElementById("fname").value = cells[0].innerText //neha = ali
+    document.getElementById("lname").value = cells[1].innerText //asif = amin
+    document.getElementById("class").value =  cells[2].innerText//9 = 10
     
+
+   
+    
+}
+
+function save() {
+
+// save  new values in variables
+if (currentRow) {
+    var FName = document.getElementById("fname").value
+  var LName = document.getElementById("lname").value
+  var Class = document.getElementById("class").value
+       cells[0].innerText = name;
+    cells[1].innerText = email;
+    cells[2].innerText = city;
+    document.getElementById("form").style.display="none"  
+}
+
+
+// Update the row
+
+var cells = document.getElementsByTagName("td")
+
+cell
+
 }
 
 // var shortText =" Lorem ipsum dolor sit, amet consectetur adipisicing elit."
