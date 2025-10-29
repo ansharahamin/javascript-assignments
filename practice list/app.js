@@ -20,7 +20,7 @@ function showPara() {
    
 
 var para = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur totam minima earum id quibusdam modi quam ipsam omnis perspiciatis, unde architecto quisquam necessitatibus exercitationem fuga tempore, mollitia alias quo doloremque.`
-   document.getElementById(para).innerHTML = para
+   document.getElementById("para").innerHTML = para
 
 }
 function hidePara(){
