@@ -1,0 +1,209 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #d98eff;
+    background-image: linear-gradient(to bottom, #ccf8b8, #c2faf7, #f4b1f7);
+    text-transform: capitalize;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+}
+
+center {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    box-sizing: border-box;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+img {
+    margin-bottom: 20px;
+    max-width: 100%;
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.legend {
+    border: 1px solid gray;
+    padding: 5px 15px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    background: #7bbffa;
+    background: linear-gradient(90deg, rgba(148, 248, 156, 0.795) 0%, rgb(135, 153, 236) 90%);
+    text-align: center;
+    color: #f0f0f0;
+}
+
+a {
+    text-shadow: 2px 2px 7px gray;
+    margin: 5px;
+    padding: 5px;
+    text-decoration: none;
+    font-weight: bolder;
+    color: inherit;
+}
+
+a:hover {
+    color: rgb(92, 30, 5);
+    background-color: rgb(144, 226, 169);
+    border-radius: 5px;
+}
+
+.btn {
+    border: none;
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 8px;
+    background: linear-gradient(90deg, rgb(238, 135, 160) 0%, rgb(162, 105, 236) 90%);
+    color: rgb(0, 0, 0);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background 0.3s ease-in-out;
+    margin: 5px;
+}
+
+.btn a {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+
+.btn:hover {
+    background-image: linear-gradient(150deg, rgb(150, 247, 142) 0%, rgb(156, 168, 236) 90%);
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+/* Base styles for inputs, including common icon properties */
+.input {
+    border: 1px solid black;
+    border-radius: 2px;
+    background-color: transparent;
+    width: calc(100% - 110px);
+    padding: 8px;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-position: 8px center;
+    /* Icon position from left edge */
+    background-size: 20px;
+    /* Icon size */
+    padding-left: 35px;
+    /* Space for the icon + padding */
+}
+
+.input:focus {
+    outline: none;
+    border: 1.5px solid #003973 !important;
+    border-radius: 2px;
+}
+
+#name {
+    background-image: url(./images/account_circle_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg);
+
+}
+
+#email {
+    background-image: url(./images/email-svgrepo-com.svg);
+
+}
+
+#password,
+#confirmPassword {
+
+    background-image: url(./images/visibility_off_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg);
+
+}
+
+label {
+    display: inline-block;
+    width: 100px;
+    color: rgba(2, 2, 2, 0.925);
+    font-weight: bolder;
+    text-align: left;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.para {
+    text-align: right;
+    margin-top: -10px;
+    margin-bottom: 15px;
+}
+
+.para a {
+    color: #007bff;
+    text-decoration: underline;
+    text-shadow: none;
+}
+
+.para a:hover {
+    color: #0056b3;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.fieldset {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.postBox{
+    width: 500px;
+    
+}
+
+@media (max-width: 600px) {
+    .input {
+        width: calc(100% - 20px);
+        margin-left: 0;
+    }
+
+    label {
+        width: 100%;
+        text-align: left;
+        margin-bottom: 5px;
+    }
+
+    form {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
