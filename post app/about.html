@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <input id="userName" type="text" placeholder="Enter name">
+<input id="title" type="text" placeholder="Enter title">
+<button onclick="post()">Post</button>
+
+<div id="postCard" class="card d-none">
+  <h3 id="inserttitle"></h3>
+  <p id="insertname"></p>
+</div> 
+<script>function post() {
+    postCard.classList.remove("d-none");
+
+    var name = document.getElementById("userName").value;
+    var title = document.getElementById("title").value; // ✅ use .value for inputs
+
+    console.log("Name:", name);
+    console.log("Title:", title);
+
+    // insert into your post card
+    insertname.innerHTML = name;
+    inserttitle.innerHTML = title;
+}
+</script>
+</body>
+</html>
+
+
