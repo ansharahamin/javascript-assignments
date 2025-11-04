@@ -26,12 +26,12 @@ function post() {
     
     console.log("Name:", name);
     console.log("Title:", title);
-    insertname.innerHTML = username;
-    insertTitle.innerHTML = usertitle;
-    insertDescription.innerHTML = userdescription;
-    name.value = ""
-    title.value = ""
-    description.value = ""
+    // insertname.innerHTML = username;
+    // insertTitle.innerHTML = usertitle;
+    // insertDescription.innerHTML = userdescription;
+    // name.value = ""
+    // title.value = ""
+    // description.value = ""
     // title.innerHTML = title
     // insertname.innerHTML = name
     postCard.innerHTML+=`
@@ -44,8 +44,8 @@ function post() {
      </div>
        <div style="background-image: url()" class="card-body">
          <blockquote class="blockquote mb-0">
-            <p id="insertTitle"></p>
-            <footer id="insertDescription" class="blockquote-footer"></footer>
+            <p id="insertTitle">${usertitle}</p>
+            <footer id="insertDescription" class="blockquote-footer">${userdescription}</footer>
           </blockquote>
        </div>
         <div class="card-footer d-flex justify-content-end">
