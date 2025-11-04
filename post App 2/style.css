@@ -1,0 +1,39 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.myNav{
+ background-color: rgba(96, 141, 118, 0.904);   
+ color: aliceblue;
+}
+.MyBtn{
+    background-color:rgba(74, 121, 107, 0.842);
+    color: aliceblue;
+    font-weight: bold;
+}
+.boxShadow:focus{
+box-shadow: none;
+border: 2px groove rgba(74, 121, 107, 0.842);
+}
+.MyBtn:hover{
+    background-color:rgba(74, 121, 107, 0.842);
+    color: aliceblue;
+    font-weight: bold;
+    transform: scale(1.15);
+    transition: 1s;
+}
+.card{
+    margin-left: 15px;
+    margin-top: 15px;
+    border-radius: 15px;
+    border: 2px groove gray;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.circle{
+    height: 40px;
+    width: 80px;
+    border-radius: 50%;
+    background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgE4FPoOW8nltH4eN6RwIcK--ckBBS-lDkyw&s");
+}
