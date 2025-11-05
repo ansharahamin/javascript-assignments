@@ -1,0 +1,33 @@
+function post(){
+    var title = document.getElementById("title").value
+    var description = document.getElementById("description").value
+    var posts = document.getElementById("posts")
+    console.log(title,description);
+    if (title.trim() && description.trim()) {
+        posts.innerHTML+=`   <div class="col-8">
+        <div class="card text-bg-light postCard">
+          <img height="200px"
+            src="https://thumbs.dreamstime.com/b/social-media-background-blue-yellow-red-social-media-post-story-banner-background-social-media-background-blue-yellow-red-social-143421416.jpg"
+            class="card-img" alt="...">
+          <div class="card-img-overlay">
+            <h5 class="card-title">${title}</h5>
+            <p class="card-text">${description}</p>
+            <p class="card-text"><small>Last updated 3 mins ago</small></p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+              <button class="btn btn-success me-md-2" type="button">Edit</button>
+              <button class="btn btn-danger" type="button">Delete</button>
+            </div>
+          </div>
+        </div>
+      </div>`
+      document.getElementById("title").value = ""
+      document.getElementById("description").value = ""
+    } else {
+Swal.fire({
+  icon: "error",
+  title: "Empty Post is not Allowed",
+  text: "Enter the title and description"
+});
+    }
+    
+}
