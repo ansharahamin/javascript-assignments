@@ -1,13 +1,15 @@
-function post(){
-    var title = document.getElementById("title").value
-    var description = document.getElementById("description").value
-    var posts = document.getElementById("posts")
-    console.log(title,description);
-    if (title.trim() && description.trim()) {
-        posts.innerHTML+=`   <div class="col-8">
+function post() {
+  var title = document.getElementById("title").value
+  var description = document.getElementById("description").value
+  var posts = document.getElementById("posts")
+  console.log(title, description);
+  var imgs = ["/images/abstract-pui50-light-background-wallpaper-colorful-gradient-blurry-soft-smooth-motion-bright-shine_792836-133030.jpg", "./images/artificial-intelligence-circuit-electric-line-600nw-2495924357.jpg", "./images/gradient-background-blue-cyan-2-vector.jpg", "/images/pexels-codioful-6985001.jpg"]
+   var randomImg = imgs[Math.floor(Math.random() * imgs.length)];
+  if (title.trim() && description.trim()) {
+    posts.innerHTML += `   <div class="col-8">
         <div class="card text-bg-light postCard">
           <img height="200px"
-            src="https://thumbs.dreamstime.com/b/social-media-background-blue-yellow-red-social-media-post-story-banner-background-social-media-background-blue-yellow-red-social-143421416.jpg"
+            src="${randomImg}"
             class="card-img" alt="...">
           <div class="card-img-overlay">
             <h5 class="card-title">${title}</h5>
@@ -20,14 +22,14 @@ function post(){
           </div>
         </div>
       </div>`
-      document.getElementById("title").value = ""
-      document.getElementById("description").value = ""
-    } else {
-Swal.fire({
-  icon: "error",
-  title: "Empty Post is not Allowed",
-  text: "Enter the title and description"
-});
-    }
-    
+    document.getElementById("title").value = ""
+    document.getElementById("description").value = ""
+  } else {
+    Swal.fire({
+      icon: "error",
+      title: "Empty Post is not Allowed",
+      text: "Enter the title and description"
+    });
+  }
+
 }
