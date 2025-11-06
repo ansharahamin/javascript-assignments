@@ -2,6 +2,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    
 }
 
 .myNav{
@@ -30,6 +31,7 @@ border: 2px groove rgba(74, 121, 107, 0.842);
     border-radius: 15px;
     border: 2px groove gray;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    max-width: 600px;
 }
 .circle{
     height: 40px;
@@ -39,7 +41,8 @@ border: 2px groove rgba(74, 121, 107, 0.842);
 }
 .postCard{
     height: 200px;
-    width: 900px;
+    width: 700px;
+    object-fit: cover;
 }
 .selectedImg{
     border-radius: 30%;
