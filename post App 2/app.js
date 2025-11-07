@@ -1,6 +1,77 @@
+
+
 var cardImg;
+var postTime = new Date()
+var timeOnly = postTime.toLocaleTimeString()
+function DisplayPost(){
+  var form =  document.getElementById("form")
+  var postBox =  document.getElementById("postBox")
+   form.classList.add("d-none")
+   postBox.classList.remove("d-none")
+   Swal.fire({
+  position: "top-end",
+  icon: "success",
+  title: "Account Created SuccessFully!!",
+  showConfirmButton: false,
+  timer: 1500
+});
+}
+
+function deletePost() {
+  console.log(event.target.parentNode.parentNode.parentNode);
+  var deletePost = event.target.parentNode.parentNode.parentNode.parentNode
+  const swalWithBootstrapButtons = Swal.mixin({
+  customClass: {
+    confirmButton: "btn btn-success",
+    cancelButton: "btn btn-danger"
+  },
+  buttonsStyling: false
+});
+swalWithBootstrapButtons.fire({
+  title: "Are you sure?",
+  text: "You won't be able to revert this!",
+  icon: "warning",
+  showCancelButton: true,
+  confirmButtonText: "Yes, delete it!",
+  cancelButtonText: "No, cancel!",
+  reverseButtons: true
+}).then((result) => {
+  if (result.isConfirmed) {
+      deletePost.remove()
+
+    swalWithBootstrapButtons.fire({
+      title: "Deleted!",
+      text: "Your post has been deleted.",
+      icon: "success"
+      
+    });
+  } else if (
+    /* Read more about handling dismissals below */
+    result.dismiss === Swal.DismissReason.cancel
+  ) {
+    swalWithBootstrapButtons.fire({
+      title: "Cancelled",
+      text: "Your post is safe :)",
+      icon: "error"
+    });
+  }
+});
+}
+
+function editPost() {
+    var deletePost = event.target.parentNode.parentNode.parentNode.parentNode
+
+    var editPost = event.target.parentNode.parentNode.childNodes[3].innerHTML
+    var description = event.target.parentNode.parentNode.childNodes[5].innerHTML
+    console.log(event.target.parentNode.parentNode.childNodes[1].childNodes[0]);
+    document.getElementById("title").value = editPost
+    document.getElementById("description").value = description
+
+ deletePost.remove()
+}
 
 function post() {
+  var userName = document.getElementById("userName").value
   var title = document.getElementById("title").value;
   var description = document.getElementById("description").value;
   var posts = document.getElementById("posts");
@@ -11,12 +82,13 @@ function post() {
         <div style="background: url('${cardImg}');" class="card text-bg-light postCard">
         
           <div class="card-img-overlay">
+                      <h3 class="card-title text-white my-4">${userName}</h5>
             <h5 class="card-title text-white">${title}</h5>
             <p class="card-text text-white">${description}</p>
-            <p class="card-text text-white"><small>Last updated 3 mins ago</small></p>
+            <p class="card-text text-white"><small>${timeOnly}</small></p>
             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-              <button class="btn btn-success me-md-2" type="button">Edit</button>
-              <button class="btn btn-danger" type="button">Delete</button>
+              <button onclick = " editPost()" class="btn btn-success me-md-2" type="button">Edit</button>
+              <button  onclick = "deletePost()" class="btn btn-danger" type="button">Delete</button>
             </div>
           </div>
         </div>
