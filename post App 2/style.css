@@ -4,7 +4,14 @@
     box-sizing: border-box;
     
 }
-
+body{
+    margin: 0%;
+    padding: 0%;
+    background-image: url("https://img.freepik.com/free-vector/leaves-background-with-metallic-foil_79603-956.jpg?semt=ais_hybrid&w=740&q=80");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
 .myNav{
  background-color: rgba(96, 141, 118, 0.904);   
  color: aliceblue;
@@ -81,4 +88,14 @@ max-width: 500px;
     border: 2px groove rgb(80, 112, 73);
         box-shadow: rgba(83, 122, 98, 0.24) 0px 3px 8px;
 outline: none;
+ }
+.postInput{
+    height: fit-content;
+    background-image: url("https://i.pinimg.com/736x/78/9d/74/789d74b1e1dfd2aa92c5d4e6588f0ed7.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+ }
+.postBtn{
+    float: right;
  }
