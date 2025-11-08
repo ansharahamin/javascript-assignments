@@ -78,7 +78,7 @@ function post() {
   console.log(title, description);
 
   if (title.trim() && description.trim()) {
-    posts.innerHTML += `   <div   class="col-8">
+    posts.innerHTML += `   <div   class="col-lg-8 col-md-12 col-sm-12">
         <div style="background: url('${cardImg}');" class="card text-bg-light postCard">
         
           <div class="card-img-overlay">

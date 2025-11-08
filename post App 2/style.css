@@ -73,6 +73,7 @@ border: 2px groove rgba(74, 121, 107, 0.842);
     transition: 1s;
 }
 .postCard{
+    
           background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -91,11 +92,20 @@ outline: none;
  }
 .postInput{
     height: fit-content;
-    background-image: url("https://i.pinimg.com/736x/78/9d/74/789d74b1e1dfd2aa92c5d4e6588f0ed7.jpg");
+    background-image: url("https://img.freepik.com/free-photo/sunset-background-pastel-sky_53876-129041.jpg?semt=ais_hybrid&w=740&q=80");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    margin: 0 auto;
+    max-width: 500px;
  }
 .postBtn{
     float: right;
+    background-color: darkolivegreen;
  }
+   @media (max-width: 900px) {
+.postCard{
+max-width: 300px ;
+max-height: 500px;
+}
+  }
