@@ -4,7 +4,16 @@ var cardImg;
 var postTime = new Date()
 var timeOnly = postTime.toLocaleTimeString()
 function DisplayPost(){
-  var form =  document.getElementById("form")
+  if ( document.getElementById("userName").value.trim() === "" && document.getElementById("floatingInput").value.trim() === "" && document.getElementById("floatingPassword").value.trim() === "") {
+    Swal.fire({
+      icon: "error",
+      title: "User Name is required",
+      text: "Please enter your user name to proceed",
+    });
+    return
+    
+  } else {
+      var form =  document.getElementById("form")
   var postBox =  document.getElementById("postBox")
    form.classList.add("d-none")
    postBox.classList.remove("d-none")
@@ -15,6 +24,8 @@ function DisplayPost(){
   showConfirmButton: false,
   timer: 1500
 });
+  }
+
 }
 
 function deletePost() {
