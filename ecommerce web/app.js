@@ -495,6 +495,14 @@ var beautyProducts = {
   },
 };
 
+for(product in beautyProducts){
+  console.log(beautyProducts[product]);
+  for(brand in beautyProducts){
+    console.log(beautyProducts[product][brand]);
+    
+  }
+}
+
 // for (let category in beautyProducts) {
 
 //   let brands = beautyProducts[category].brands;
