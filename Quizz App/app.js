@@ -1,4 +1,4 @@
-function DisplayPost() {
+function Displayquiz() {
   if (
     document.getElementById("userName").value.trim() === "" ||
     document.getElementById("floatingInput").value.trim() === "" ||
@@ -12,9 +12,11 @@ function DisplayPost() {
     return;
   } else {
     var form = document.getElementById("form");
+    var card = document.getElementById("card");
 
     form.classList.add("d-none");
-
+    card.classList.remove("d-none");
+    renderQuestions()
     Swal.fire({
       position: "top-end",
       icon: "success",
@@ -36,8 +38,7 @@ var QuizQuestions = [
   },
 
   {
-    question2:
-      "What is the output of: console.log(typeof NaN);",
+    question2: "What is the output of: console.log(typeof NaN);",
     A: "undefined",
     B: "number",
     C: "NaN",
@@ -54,8 +55,7 @@ var QuizQuestions = [
   },
 
   {
-    question4:
-      "Which symbol is used for single-line comments in JavaScript?",
+    question4: "Which symbol is used for single-line comments in JavaScript?",
     A: "<!-- comment -->",
     B: "/* comment */",
     C: "// comment",
@@ -63,8 +63,7 @@ var QuizQuestions = [
   },
 
   {
-    question5:
-      "What will this return? Boolean(' ')",
+    question5: "What will this return? Boolean(' ')",
     A: "false",
     B: "true",
     C: "undefined",
@@ -72,8 +71,7 @@ var QuizQuestions = [
   },
 
   {
-    question6:
-      "Which of the following is NOT a JavaScript data type?",
+    question6: "Which of the following is NOT a JavaScript data type?",
     A: "Number",
     B: "String",
     C: "Character",
@@ -81,8 +79,7 @@ var QuizQuestions = [
   },
 
   {
-    question7:
-      "What is the correct syntax for an arrow function?",
+    question7: "What is the correct syntax for an arrow function?",
     A: "function => () {}",
     B: "() => {}",
     C: "() -> {}",
@@ -90,8 +87,7 @@ var QuizQuestions = [
   },
 
   {
-    question8:
-      "What does the push() method do in JavaScript arrays?",
+    question8: "What does the push() method do in JavaScript arrays?",
     A: "Removes the last element",
     B: "Adds an element to the end",
     C: "Adds an element to the beginning",
@@ -99,8 +95,7 @@ var QuizQuestions = [
   },
 
   {
-    question9:
-      "What is the result of: console.log(2 + '2');",
+    question9: "What is the result of: console.log(2 + '2');",
     A: "4",
     B: "22",
     C: "NaN",
@@ -108,15 +103,41 @@ var QuizQuestions = [
   },
 
   {
-    question10:
-      "Which keyword stops a loop in JavaScript?",
+    question10: "Which keyword stops a loop in JavaScript?",
     A: "break",
     B: "stop",
     C: "exit",
     D: "halt",
   },
-
 ];
 
-  
+var index = 0;
+var result = 0;
+console.log(QuizQuestions[index]);
+function renderQuestions() {
+  var container = document.getElementById("card");
+  var opt = document.getElementsByName("options");
+  for (let i = 0; i < opt.length; i++) {
+    if (opt[i].checked) {
+      if (QuizQuestions[index - 1].ans === opt[i].value) {
+        result++;
+      }
+    }
+      container.innerhtml = `  <div class="card-header">
+  Questions
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"><label for="opt1"><input name="options" type="radio" id="opt1" value="">hello</label></li>
+    <li class="list-group-item"><label for="opt2"><input name="options" type="radio" id="opt2" value=""></label></li>
+    <li class="list-group-item"><label for="opt3"><input name="options" type="radio" id="opt3" value=""></label></li>
+    <li class="list-group-item"><label for="opt4"><input name="options" type="radio" id="opt4" value="">hello</label></li>
+    <li class="list-group-item d-flex  justify-content-between">
+  <button class="btn btn-danger" type="button">previous</button>
+  <button class="btn btn-success" type="button">next</button>
+</li>
 
+  </ul>
+</div>`;
+  }
+
+}
