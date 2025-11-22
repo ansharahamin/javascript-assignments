@@ -1,3 +1,167 @@
+var QuizQuestions = [
+  {
+    question:
+      "Which of the following is used to declare a variable in JavaScript?",
+    A: "var",
+    B: "let",
+    C: "const",
+    D: "All of the above",
+    ans: "D"
+  },
+
+  {
+    question: "What is the output of: console.log(typeof NaN);",
+    A: "undefined",
+    B: "number",
+    C: "NaN",
+    D: "object",
+    ans: "B"
+  },
+
+  {
+    question:
+      "Which method is used to convert JSON data into a JavaScript object?",
+    A: "JSON.stringify()",
+    B: "JSON.parse()",
+    C: "JSON.toObject()",
+    D: "JSON.convert()",
+    ans: "B"
+  },
+
+  {
+    question: "Which symbol is used for single-line comments in JavaScript?",
+    A: "<!-- comment -->",
+    B: "/* comment */",
+    C: "// comment",
+    D: "** comment",
+    ans: "C"
+  },
+
+  {
+    question: "What will this return? Boolean(' ')",
+    A: "false",
+    B: "true",
+    C: "undefined",
+    D: "null",
+    ans: "C"
+  },
+
+  {
+    question: "Which of the following is NOT a JavaScript data type?",
+    A: "Number",
+    B: "String",
+    C: "Character",
+    D: "Boolean",
+    ans: "C"
+  },
+
+  {
+    question: "What is the correct syntax for an arrow function?",
+    A: "function => () {}",
+    B: "() => {}",
+    C: "() -> {}",
+    D: "=> () {}",
+    ans: "B"
+  },
+
+  {
+    question: "What does the push() method do in JavaScript arrays?",
+    A: "Removes the last element",
+    B: "Adds an element to the end",
+    C: "Adds an element to the beginning",
+    D: "Removes the first element",
+    ans: "B"
+  },
+
+  {
+    question: "What is the result of: console.log(2 + '2');",
+    A: "4",
+    B: "22",
+    C: "NaN",
+    D: "2 + 2",
+    ans: "B"
+  },
+
+  {
+    question: "Which keyword stops a loop in JavaScript?",
+    A: "break",
+    B: "stop",
+    C: "exit",
+    D: "halt",
+    ans: "A"
+  },
+];
+
+//===========vars===========
+var index = 0;
+var result = 0;
+console.log(QuizQuestions[index]);
+function renderQuestions() {
+  var container = document.getElementById("card");
+
+    container.innerHTML = `  <div class="card-header">
+${QuizQuestions[index].question}
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"><label for="opt1"><input name="options" type="radio" id="opt1" value="A"> ${QuizQuestions[index].A}</label></li>
+    <li class="list-group-item"><label for="opt2"><input name="options" type="radio" id="opt2" value="B"> ${QuizQuestions[index].B}</label></li>
+    <li class="list-group-item"><label for="opt3"><input name="options" type="radio" id="opt3" value="C"> ${QuizQuestions[index].C}</label></li>
+    <li class="list-group-item"><label for="opt4"><input name="options" type="radio" id="opt4" value="D"> ${QuizQuestions[index].D}</label></li>
+    <li class="list-group-item d-flex  justify-content-between">
+  <button class="btn btn-danger" onclick = "prev()" type="button">previous</button>
+  <button class="btn btn-success" onclick = "next()" type="button">next</button>
+</li>
+
+  </ul>
+</div>`;
+  
+  
+  // for (let i = 0; i < opt.length; i++) {
+  //   // if (opt[i].checked) {
+  //   //   if (QuizQuestions[index - 1].ans === opt[i].value) {
+  //   //     result++;
+  //   //   }
+
+  // }
+
+}
+
+
+
+function checkAnswer() {
+  var opt = document.getElementsByName("options");
+
+  for (let i = 0; i < opt.length; i++) {
+if (opt[i].checked) {
+  if (opt[i].value === QuizQuestions[index].ans) {
+   
+    result++
+    
+  }
+}  
+}
+}
+
+function next() {
+checkAnswer()
+if (index<QuizQuestions.length-1) {
+  index++
+ renderQuestions()
+}else{
+  console.log("Your score is " + result);
+  
+}
+  
+}
+function prev() {
+
+if (index<0) {
+ index--
+ renderQuestions()
+}
+  
+}
+
 function Displayquiz() {
   if (
     document.getElementById("userName").value.trim() === "" ||
@@ -13,10 +177,10 @@ function Displayquiz() {
   } else {
     var form = document.getElementById("form");
     var card = document.getElementById("card");
-
+renderQuestions()
     form.classList.add("d-none");
     card.classList.remove("d-none");
-    renderQuestions()
+
     Swal.fire({
       position: "top-end",
       icon: "success",
@@ -27,117 +191,3 @@ function Displayquiz() {
   }
 }
 
-var QuizQuestions = [
-  {
-    question1:
-      "Which of the following is used to declare a variable in JavaScript?",
-    A: "var",
-    B: "let",
-    C: "const",
-    D: "All of the above",
-  },
-
-  {
-    question2: "What is the output of: console.log(typeof NaN);",
-    A: "undefined",
-    B: "number",
-    C: "NaN",
-    D: "object",
-  },
-
-  {
-    question3:
-      "Which method is used to convert JSON data into a JavaScript object?",
-    A: "JSON.stringify()",
-    B: "JSON.parse()",
-    C: "JSON.toObject()",
-    D: "JSON.convert()",
-  },
-
-  {
-    question4: "Which symbol is used for single-line comments in JavaScript?",
-    A: "<!-- comment -->",
-    B: "/* comment */",
-    C: "// comment",
-    D: "** comment",
-  },
-
-  {
-    question5: "What will this return? Boolean(' ')",
-    A: "false",
-    B: "true",
-    C: "undefined",
-    D: "null",
-  },
-
-  {
-    question6: "Which of the following is NOT a JavaScript data type?",
-    A: "Number",
-    B: "String",
-    C: "Character",
-    D: "Boolean",
-  },
-
-  {
-    question7: "What is the correct syntax for an arrow function?",
-    A: "function => () {}",
-    B: "() => {}",
-    C: "() -> {}",
-    D: "=> () {}",
-  },
-
-  {
-    question8: "What does the push() method do in JavaScript arrays?",
-    A: "Removes the last element",
-    B: "Adds an element to the end",
-    C: "Adds an element to the beginning",
-    D: "Removes the first element",
-  },
-
-  {
-    question9: "What is the result of: console.log(2 + '2');",
-    A: "4",
-    B: "22",
-    C: "NaN",
-    D: "2 + 2",
-  },
-
-  {
-    question10: "Which keyword stops a loop in JavaScript?",
-    A: "break",
-    B: "stop",
-    C: "exit",
-    D: "halt",
-  },
-];
-
-var index = 0;
-var result = 0;
-console.log(QuizQuestions[index]);
-function renderQuestions() {
-  var container = document.getElementById("card");
-  var opt = document.getElementsByName("options");
-  for (let i = 0; i < opt.length; i++) {
-    if (opt[i].checked) {
-      if (QuizQuestions[index - 1].ans === opt[i].value) {
-        result++;
-      }
-    }
-      container.innerhtml = `  <div class="card-header">
-  Questions
-  </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item"><label for="opt1"><input name="options" type="radio" id="opt1" value="">hello</label></li>
-    <li class="list-group-item"><label for="opt2"><input name="options" type="radio" id="opt2" value=""></label></li>
-    <li class="list-group-item"><label for="opt3"><input name="options" type="radio" id="opt3" value=""></label></li>
-    <li class="list-group-item"><label for="opt4"><input name="options" type="radio" id="opt4" value="">hello</label></li>
-    <li class="list-group-item d-flex  justify-content-between">
-  <button class="btn btn-danger" type="button">previous</button>
-  <button class="btn btn-success" type="button">next</button>
-</li>
-
-  </ul>
-</div>`;
-  }
-
-}
