@@ -103,12 +103,12 @@ function renderQuestions() {
 ${QuizQuestions[index].question}
   </div>
   <ul class="list-group list-group-flush">
-    <li class="list-group-item"><label for="opt1"><input name="options" type="radio" id="opt1" value="A"> ${QuizQuestions[index].A}</label></li>
-    <li class="list-group-item"><label for="opt2"><input name="options" type="radio" id="opt2" value="B"> ${QuizQuestions[index].B}</label></li>
-    <li class="list-group-item"><label for="opt3"><input name="options" type="radio" id="opt3" value="C"> ${QuizQuestions[index].C}</label></li>
-    <li class="list-group-item"><label for="opt4"><input name="options" type="radio" id="opt4" value="D"> ${QuizQuestions[index].D}</label></li>
+    <li class="list-group-item"><input name="options" type="radio" id="opt1" value="A"><span> ${QuizQuestions[index].A}</span><label for="opt1"></label></li>
+    <li class="list-group-item"><label for="opt2"><input name="options" type="radio" id="opt2" value="B"><span> ${QuizQuestions[index].B}</span></label></li>
+    <li class="list-group-item"><label for="opt3"><input name="options" type="radio" id="opt3" value="C"><span> ${QuizQuestions[index].C}</span></label></li>
+    <li class="list-group-item"><label for="opt4"><input name="options" type="radio" id="opt4" value="D"><span> ${QuizQuestions[index].D}</span></label></li>
     <li class="list-group-item d-flex  justify-content-between">
-  <button class="btn btn-danger" onclick = "prev()" type="button">previous</button>
+  <button class="btn btn-danger"  onclick = "prev()" type="button">previous</button>
   <button class="btn btn-success" onclick = "next()" type="button">next</button>
 </li>
 
@@ -133,6 +133,7 @@ function checkAnswer() {
 
   for (let i = 0; i < opt.length; i++) {
 if (opt[i].checked) {
+document.getElementById("next").disabled = true;
   if (opt[i].value === QuizQuestions[index].ans) {
    
     result++
@@ -155,7 +156,7 @@ if (index<QuizQuestions.length-1) {
 }
 function prev() {
 
-if (index<0) {
+if (index>0) {
  index--
  renderQuestions()
 }

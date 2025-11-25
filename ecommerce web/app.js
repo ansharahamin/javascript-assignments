@@ -87,7 +87,6 @@ var beautyProducts = {
               description:
                 "Lightweight moisturizing cream perfect for everyday use.",
             },
-
           },
         },
         "face Wash": {
@@ -116,7 +115,6 @@ var beautyProducts = {
               description:
                 "Lightweight moisturizing cream perfect for everyday use.",
             },
-
           },
         },
       },
@@ -495,13 +493,12 @@ var beautyProducts = {
   },
 };
 
-for(product in beautyProducts){
-  console.log(beautyProducts[product]);
-  for(brand in beautyProducts){
-    console.log(beautyProducts[product][brand]);
-    
-  }
-}
+// for (product in beautyProducts) {
+//   console.log(beautyProducts[product]);
+//   for (brand in beautyProducts) {
+//     console.log(beautyProducts[product][brand]);
+//   }
+// }
 
 // for (let category in beautyProducts) {
 
@@ -525,6 +522,14 @@ for(product in beautyProducts){
 
 // }
 
+for (let i in beautyProducts){
+  let brand = beautyProducts[i].brands
+  console.log(brand);
+  for(let j in brands){
+    let 
+  }
+  
+}
 
 
 // for (let category in beautyProducts) {
@@ -537,9 +542,7 @@ for(product in beautyProducts){
 //   for(let type in productTypes){
 //   let product = productTypes[type].product
 //   console.log(product);
- 
-  
-// }
-// }
-// }
 
+// }
+// }
+// }
