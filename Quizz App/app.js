@@ -95,7 +95,11 @@ var QuizQuestions = [
 //===========vars===========
 var index = 0;
 var result = 0;
+
+
 console.log(QuizQuestions[index]);
+
+
 function renderQuestions() {
   var container = document.getElementById("card");
 
@@ -108,13 +112,15 @@ ${QuizQuestions[index].question}
     <li class="list-group-item"><label for="opt3"><input name="options" type="radio" id="opt3" value="C"><span> ${QuizQuestions[index].C}</span></label></li>
     <li class="list-group-item"><label for="opt4"><input name="options" type="radio" id="opt4" value="D"><span> ${QuizQuestions[index].D}</span></label></li>
     <li class="list-group-item d-flex  justify-content-between">
-  <button class="btn btn-danger"  onclick = "prev()" type="button">previous</button>
-  <button class="btn btn-success" onclick = "next()" type="button">next</button>
+  <button disabled class="btn btn-danger"  onclick = "prev()" type="button">previous</button>
+  <button id="next" disabled class="btn btn-success" onclick = "next()" type="button">next</button>
 </li>
 
   </ul>
 </div>`;
-  
+ next = document.getElementById("next")
+console.log(next);
+
   
   // for (let i = 0; i < opt.length; i++) {
   //   // if (opt[i].checked) {
@@ -126,14 +132,15 @@ ${QuizQuestions[index].question}
 
 }
 
-
+var next = document.getElementById("next")
+console.log(next);
 
 function checkAnswer() {
   var opt = document.getElementsByName("options");
 
   for (let i = 0; i < opt.length; i++) {
 if (opt[i].checked) {
-document.getElementById("next").disabled = true;
+ next.removeAttribute("disabled")
   if (opt[i].value === QuizQuestions[index].ans) {
    
     result++
@@ -146,6 +153,7 @@ document.getElementById("next").disabled = true;
 function next() {
 checkAnswer()
 if (index<QuizQuestions.length-1) {
+next.removeAttribute("disabled")
   index++
  renderQuestions()
 }else{
