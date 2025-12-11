@@ -6,7 +6,7 @@ var QuizQuestions = [
     B: "let",
     C: "const",
     D: "All of the above",
-    ans: "D"
+    ans: "D",
   },
 
   {
@@ -15,7 +15,7 @@ var QuizQuestions = [
     B: "number",
     C: "NaN",
     D: "object",
-    ans: "B"
+    ans: "B",
   },
 
   {
@@ -25,7 +25,7 @@ var QuizQuestions = [
     B: "JSON.parse()",
     C: "JSON.toObject()",
     D: "JSON.convert()",
-    ans: "B"
+    ans: "B",
   },
 
   {
@@ -34,7 +34,7 @@ var QuizQuestions = [
     B: "/* comment */",
     C: "// comment",
     D: "** comment",
-    ans: "C"
+    ans: "C",
   },
 
   {
@@ -43,7 +43,7 @@ var QuizQuestions = [
     B: "true",
     C: "undefined",
     D: "null",
-    ans: "C"
+    ans: "C",
   },
 
   {
@@ -52,7 +52,7 @@ var QuizQuestions = [
     B: "String",
     C: "Character",
     D: "Boolean",
-    ans: "C"
+    ans: "C",
   },
 
   {
@@ -61,7 +61,7 @@ var QuizQuestions = [
     B: "() => {}",
     C: "() -> {}",
     D: "=> () {}",
-    ans: "B"
+    ans: "B",
   },
 
   {
@@ -70,7 +70,7 @@ var QuizQuestions = [
     B: "Adds an element to the end",
     C: "Adds an element to the beginning",
     D: "Removes the first element",
-    ans: "B"
+    ans: "B",
   },
 
   {
@@ -79,7 +79,7 @@ var QuizQuestions = [
     B: "22",
     C: "NaN",
     D: "2 + 2",
-    ans: "B"
+    ans: "B",
   },
 
   {
@@ -88,7 +88,7 @@ var QuizQuestions = [
     B: "stop",
     C: "exit",
     D: "halt",
-    ans: "A"
+    ans: "A",
   },
 ];
 
@@ -96,79 +96,68 @@ var QuizQuestions = [
 var index = 0;
 var result = 0;
 
-
 console.log(QuizQuestions[index]);
-
 
 function renderQuestions() {
   var container = document.getElementById("card");
 
-    container.innerHTML = `  <div class="card-header">
+  container.innerHTML = `  <div class="card-header">
 ${QuizQuestions[index].question}
   </div>
   <ul class="list-group list-group-flush">
-    <li class="list-group-item"><input name="options" type="radio" id="opt1" value="A"><span> ${QuizQuestions[index].A}</span><label for="opt1"></label></li>
-    <li class="list-group-item"><label for="opt2"><input name="options" type="radio" id="opt2" value="B"><span> ${QuizQuestions[index].B}</span></label></li>
-    <li class="list-group-item"><label for="opt3"><input name="options" type="radio" id="opt3" value="C"><span> ${QuizQuestions[index].C}</span></label></li>
-    <li class="list-group-item"><label for="opt4"><input name="options" type="radio" id="opt4" value="D"><span> ${QuizQuestions[index].D}</span></label></li>
+    <li class="list-group-item"><input onclick = "enableNext()" name="options" type="radio" id="opt1" value="A"><span> ${QuizQuestions[index].A}</span><label for="opt1"></label></li>
+    <li class="list-group-item"><label for="opt2"><input onclick = "enableNext()" name="options" type="radio" id="opt2" value="B"><span> ${QuizQuestions[index].B}</span></label></li>
+    <li class="list-group-item"><label for="opt3"><input onclick = "enableNext()" name="options" type="radio" id="opt3" value="C"><span> ${QuizQuestions[index].C}</span></label></li>
+    <li class="list-group-item"><label for="opt4"><input onclick = "enableNext()" name="options" type="radio" id="opt4" value="D"><span> ${QuizQuestions[index].D}</span></label></li>
     <li class="list-group-item d-flex  justify-content-between">
-  <button disabled class="btn btn-danger"  onclick = "prev()" type="button">previous</button>
+  <button class="btn btn-danger" disabled  onclick = "prev()" type="button">previous</button>
   <button id="next" disabled class="btn btn-success" onclick = "next()" type="button">next</button>
 </li>
 
   </ul>
 </div>`;
- next = document.getElementById("next")
-console.log(next);
+  nextbtn = document.getElementById("next");
+  console.log(nextbtn);
 
-  
-  // for (let i = 0; i < opt.length; i++) {
-  //   // if (opt[i].checked) {
-  //   //   if (QuizQuestions[index - 1].ans === opt[i].value) {
-  //   //     result++;
-  //   //   }
-
-  // }
 
 }
 
-var nextbtn = document.getElementById("next")
-console.log(nextbtn);
-
-function checkAnswer() {
-  var opt = document.getElementsByName("options");
-
-  for (let i = 0; i < opt.length; i++) {
-if (opt[i].checked) {
- next.removeAttribute("disabled")
-  if (opt[i].value === QuizQuestions[index].ans) {
-   
-    result++
-    
-  }
-}  
+function enableNext(){
+  nextbtn = document.getElementById("next");  
+  nextbtn.disabled = false;
 }
-}
+
 
 function next() {
-// checkAnswer()
-if (index<QuizQuestions.length-1) {
-next.removeAttribute("disabled")
-  index++
- renderQuestions()
-}else{
-  console.log("Your score is " + result);
-  
-}
-  
-}
-function prev() {
+  var opt = document.getElementsByName("options");
+  nextbtn = document.getElementById("next");
+  console.log(nextbtn);
+nextbtn.disabled = true;
+  // Check if selected answer is correct
+  for (let i = 0; i < opt.length; i++) {
+    if (opt[i].checked) {
+      if (opt[i].value === QuizQuestions[index].ans) {
+        result++;
+      }
+    }
+  }
 
-if (index>0) {
- index--
- renderQuestions()
+  if (index < QuizQuestions.length - 1) {
+    index++;
+    renderQuestions();
+  } else {
+var resultDiv = document.getElementById("resultDiv");
+var card = document.getElementById("card"); 
+  }
 }
-  
+
+
+
+function prev() {
+  if (index > 0) {
+    index--;
+    renderQuestions();
+  }
 }
 
 function Displayquiz() {
@@ -186,7 +175,7 @@ function Displayquiz() {
   } else {
     var form = document.getElementById("form");
     var card = document.getElementById("card");
-renderQuestions()
+    renderQuestions();
     form.classList.add("d-none");
     card.classList.remove("d-none");
 
@@ -199,4 +188,3 @@ renderQuestions()
     });
   }
 }
-
