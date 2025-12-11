@@ -132,8 +132,8 @@ console.log(next);
 
 }
 
-var next = document.getElementById("next")
-console.log(next);
+var nextbtn = document.getElementById("next")
+console.log(nextbtn);
 
 function checkAnswer() {
   var opt = document.getElementsByName("options");
@@ -151,7 +151,7 @@ if (opt[i].checked) {
 }
 
 function next() {
-checkAnswer()
+// checkAnswer()
 if (index<QuizQuestions.length-1) {
 next.removeAttribute("disabled")
   index++
